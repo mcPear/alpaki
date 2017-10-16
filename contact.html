@@ -6,9 +6,38 @@
     <meta name="description" content="Formularz umożliwiający kontakt z firmą">
     <meta name="keywords" content="kontakt, email">
 </head>
-
 <body>
-<h2><a href="./index.html"><div style="display:inline-block;"><img src="alpaki/image/logo.png" alt="logo" width="250px" height="250px"><p>Polskie Alpaki&trade;</p></div></a></h2>
-</body>
+<!--logo-->
+<h2>
+    <a href="./index.html">
+        <img src="alpaki/image/logo.png" alt="logo" width="250" height="250"><br>
+       Polskie Alpaki&trade;
+    </a>
+</h2>
 
+<!--contact form-->
+<form action="#" method="post">
+    <h2 style="text-align: center">Skontaktuj się z nami</h2>
+
+    <div style="width: 300px;display: block;margin-left: auto;margin-right: auto">
+        <p>Imię :</p>
+        <input type="text" name="firstName" size="36">
+
+        <p>Nazwisko :</p>
+        <input type="text" name="lastName" size="36">
+
+        <p>Email :</p>
+        <input type="email" name="email" size="36">
+
+        <p>Treść :</p>
+        <textarea name="text" rows="4" cols="36"></textarea>
+
+        <p style="text-align: center">
+            <input type="submit" value="Wyslij">
+            <input type="reset" value="Wyczyść">
+        </p>
+    </div>
+</form>
+
+</body>
 </html>
