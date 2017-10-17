@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Praca</title>
+    <meta name="description" content="Strona dla osób zainteresowanych pracą w firmie">
+    <meta name="keywords" content="praca, gospodarstwo, hodowla, weterynaria, opieka">
+</head>
+<body>
+<!--logo-->
+<h2>
+    <a href="./index.html">
+        <img src="../res/image/logo.png" alt="logo" width="250" height="250"><br>
+       Polskie Alpaki&trade;
+    </a>
+</h2>
+    <h2 style="text-align: center">Strona dla przyszłych pracowników naszej firmy</h2>
+    <p style="text-align: center">Jeśli poszukujesz pracy przy hodowli, lubisz zwierzęta i masz z nimi dobry kontakt to zgłoś się do nas !</p>
+
+
+<!--offer form-->
+<form action="#" method="post">
+    <h2 style="text-align: center">Na początek przedstaw się</h2>
+
+    <div style="width: 300px;display: block;margin-left: auto;margin-right: auto">
+        <div>
+        <p style="display: inline-block">Imię :</p>
+        <input style="display: inline-block" type="text" name="firstName" size="36" >
+        </div>
+
+        <p>
+        <span> Imię : </span>
+        <input type="text" name="firstName" style="display: inline-block">
+        </p>
+
+        <p>
+        <span> Nazwisko : </span>
+        <input type="text" name="lastName" style="display: inline-block">
+        </p>
+
+        <p>Nazwisko :</p>
+        <input type="text" name="firstName" name="lastName" size="36">
+
+        <p>Email :</p>
+        <input type="email" name="email" size="36">
+
+        <p>Treść :</p>
+        <textarea name="text" rows="4" cols="36"></textarea>
+
+        <p style="text-align: center">
+            <input type="submit" value="Wyslij">
+            <input type="reset" value="Wyczyść">
+        </p>
+    </div>
+</form>
+
+<form action="/action_page.php" autocomplete="on">
+  <div style="width: 300px;display: block;margin-left: auto;margin-right: auto">
+  Imię: <input type="text" name="fname"><br>
+  Nazwisko: <input type="text" name="lname"><br>
+  E-mail: <input type="email" name="email" autocomplete="off"><br>
+  Miesiąc urodzenia: <input list="months" name="months">
+           <datalist id="months">
+             <option value="styczeń">
+             <option value="luty">
+             <option value="marzec">
+             <option value="kwiecień">
+             <option value="maj">
+             <option value="czerwiec">
+             <option value="lipiec">
+             <option value="sierpień">
+             <option value="wrzesień">
+             <option value="październik">
+             <option value="listopad">
+             <option value="grudzień">
+           </datalist>
+   Telefon: <input type="email" name="email" autocomplete="off"><br>
+           <input type="submit"><br>
+  <input type="submit">
+  </div>
+</form>
+
+</body>
+</html>
