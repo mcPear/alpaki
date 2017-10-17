@@ -19,46 +19,11 @@
 
 
 <!--offer form-->
-<form action="#" method="post">
-    <h2 style="text-align: center">Na początek przedstaw się</h2>
-
-    <div style="width: 300px;display: block;margin-left: auto;margin-right: auto">
-        <div>
-        <p style="display: inline-block">Imię :</p>
-        <input style="display: inline-block" type="text" name="firstName" size="36" >
-        </div>
-
-        <p>
-        <span> Imię : </span>
-        <input type="text" name="firstName" style="display: inline-block">
-        </p>
-
-        <p>
-        <span> Nazwisko : </span>
-        <input type="text" name="lastName" style="display: inline-block">
-        </p>
-
-        <p>Nazwisko :</p>
-        <input type="text" name="firstName" name="lastName" size="36">
-
-        <p>Email :</p>
-        <input type="email" name="email" size="36">
-
-        <p>Treść :</p>
-        <textarea name="text" rows="4" cols="36"></textarea>
-
-        <p style="text-align: center">
-            <input type="submit" value="Wyslij">
-            <input type="reset" value="Wyczyść">
-        </p>
-    </div>
-</form>
-
 <form action="/action_page.php" autocomplete="on">
-  <div style="width: 300px;display: block;margin-left: auto;margin-right: auto">
-  Imię: <input type="text" name="fname"><br>
-  Nazwisko: <input type="text" name="lname"><br>
-  E-mail: <input type="email" name="email" autocomplete="off"><br>
+  <div style="width: 600px;display: block;margin-left: auto;margin-right: auto">
+  Imię: <input type="text" name="fname" autofocus><br>
+  Nazwisko: <input type="text" name="lname" required><br>
+  E-mail: <input type="email" name="email" required><br>
   Miesiąc urodzenia: <input list="months" name="months">
            <datalist id="months">
              <option value="styczeń">
@@ -73,9 +38,8 @@
              <option value="październik">
              <option value="listopad">
              <option value="grudzień">
-           </datalist>
-   Telefon: <input type="email" name="email" autocomplete="off"><br>
-           <input type="submit"><br>
+           </datalist><br>
+   Telefon: <input type="email" name="email" pattern="[1-9]{6}"> 6 cyfr<br>
   <input type="submit">
   </div>
 </form>
