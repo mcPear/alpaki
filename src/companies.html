@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dla firm</title>
+    <meta name="description" content="Strona poświęcona współpracy z firmami">
+    <meta name="keywords" content="współpraca, dla, firm, korelacja, wsparcie">
+</head>
+<body>
+<!--logo-->
+<h2>
+    <a href="./index.html">
+        <img src="../res/image/logo.png" alt="logo" width="250" height="250"><br>
+        Polskie Alpaki&trade;
+    </a>
+</h2>
+<h2 style="text-align: center">Strona umożliwiająca współpracę z firmami</h2>
+<p style="text-align: center">Jeśli prowadzisz dobrze prosperującą firme i chcesz nawiązać z nami współpracę - wypełnij nasz formularz!</p>
+
+
+<!--offer form-->
+<form action="/action_page.php" autocomplete="on">
+    <div style="width: 600px;display: block;margin-left: auto;margin-right: auto">
+        Nazwa firmy: <input type="text" name="name" placeholder="nazwa firmy" autofocus><br>
+        Data powstania: <input type="month" name="date" required><br>
+        Doświadczenie w hodowli zwierząt: min<input type="range" name="experience" required>max<br>
+        Tematyka firmy(tagi po przecinku): <input type="search" name="tags" placeholder="gastronomia, dowóz" required><br>
+        Adres strony: <input type="url" name="website" placeholder="http://www.przyklad.pl" required><br>
+        Kolor przewodni logo firmy: <input type="color" name="color" required><br>
+        <input type="submit" style="margin-top: 20px">
+    </div>
+</form>
+
+<footer>
+    <p style="text-align: center;">Copyright 2017</p>
+</footer>
+
+</body>
+</html>
