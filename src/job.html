@@ -11,37 +11,47 @@
 <h2>
     <a href="./index.html">
         <img src="../res/image/logo.png" alt="logo" width="250" height="250"><br>
-       Polskie Alpaki&trade;
+        Polskie Alpaki&trade;
     </a>
 </h2>
-    <h2 style="text-align: center">Strona dla przyszłych pracowników naszej firmy</h2>
-    <p style="text-align: center">Jeśli poszukujesz pracy przy hodowli, lubisz zwierzęta i masz z nimi dobry kontakt to zgłoś się do nas !</p>
+<h2 style="text-align: center">Strona dla przyszłych pracowników naszej firmy</h2>
+<p style="text-align: center">Jeśli poszukujesz pracy przy hodowli, lubisz zwierzęta i masz z nimi dobry kontakt to
+    zgłoś się do nas !</p>
 
 
 <!--offer form-->
 <form action="/action_page.php" autocomplete="on">
-  <div style="width: 600px;display: block;margin-left: auto;margin-right: auto">
-  Imię: <input type="text" name="fname" autofocus><br>
-  Nazwisko: <input type="text" name="lname" required><br>
-  E-mail: <input type="email" name="email" required><br>
-  Miesiąc urodzenia: <input list="months" name="months">
-           <datalist id="months">
-             <option value="styczeń">
-             <option value="luty">
-             <option value="marzec">
-             <option value="kwiecień">
-             <option value="maj">
-             <option value="czerwiec">
-             <option value="lipiec">
-             <option value="sierpień">
-             <option value="wrzesień">
-             <option value="październik">
-             <option value="listopad">
-             <option value="grudzień">
-           </datalist><br>
-   Telefon: <input type="email" name="email" pattern="[1-9]{6}"> 6 cyfr<br>
-  <input type="submit">
-  </div>
+    <div style="width: 600px;display: block;margin-left: auto;margin-right: auto">
+        <label style="margin-right: 50px">Imię:</label><input type="text" name="fname" autofocus><br>
+        Nazwisko: <input type="text" name="lname" required><br>
+        E-mail: <input type="email" name="email" required><br>
+        Miesiąc urodzenia: <input list="months" name="months">
+        <datalist id="months">
+            <option value="styczeń">
+            <option value="luty">
+            <option value="marzec">
+            <option value="kwiecień">
+            <option value="maj">
+            <option value="czerwiec">
+            <option value="lipiec">
+            <option value="sierpień">
+            <option value="wrzesień">
+            <option value="październik">
+            <option value="listopad">
+            <option value="grudzień">
+        </datalist>
+        <br>
+        Telefon: <input type="tel" name="tel" pattern="[1-9]{6}"> 6 cyfr<br>
+        <p>Stanowisko</p>
+        Sprzątacz<input type="radio" name="job" value="sprzatacz" checked><br>
+        Hodowca<input type="radio" name="job" value="hodowca"><br>
+        Kucharz<input type="radio" name="job" value="kucharz"><br>
+        <p>Umiejetności</p>
+        Prawo jazdy<input type="checkbox" name="skills" value="drivingLicense"><br>
+        Inne doswiadczenie zawodowe<input type="checkbox" name="skills" value="experience"><br>
+        Znajomość języków obcych<input type="checkbox" name="skills" value="foreignLanguage"><br>
+        <input type="submit" style="margin-top: 20px">
+    </div>
 </form>
 
 <footer>
