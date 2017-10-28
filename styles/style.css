@@ -3,13 +3,16 @@
 .table-navbar {
     margin-right: auto;
     margin-left: auto;
-    border: 5px double black;
+    border-width: 5px;
+    border-style: solid;
+    border-color: blueviolet;
     background-color: white;
 }
 
 .table-navbar td {
     width: 200px;
-    height: 50px;
+    /*height: 50px;*/
+    padding: 20px;
     background-color: white;
     text-align: center;
 }
@@ -23,6 +26,12 @@ td > a{
     background-color: orchid;
 }
 .table-navbar td:hover a {
+    color: white;
+}
+td.td-active{
+    background-color: orchid;
+}
+td.td-active a {
     color: white;
 }
 body{
