@@ -20,6 +20,8 @@
 td > a{
     text-decoration: none;
     font-size: larger;
+    font-family: "Calibri";
+    font-weight: bold;
 }
 
 .table-navbar td:hover {
