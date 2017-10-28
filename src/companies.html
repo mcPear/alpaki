@@ -5,6 +5,7 @@
     <title>Dla firm</title>
     <meta name="description" content="Strona poświęcona współpracy z firmami">
     <meta name="keywords" content="współpraca, dla, firm, korelacja, wsparcie">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
 <body>
 <!--logo-->
@@ -21,63 +22,42 @@
 
 <!--navbar-->
 <nav>
-    <table style="margin-right: auto;margin-left: auto;border: 5px double black;">
-        <col style="width: 200px">
-        <col style="width: 200px">
-        <col style="width: 200px">
-        <col style="width: 200px">
-        <col style="width: 200px">
-        <col style="width: 200px">
-        <col style="width: 200px">
+    <table class="table-navbar">
         <tr>
             <td>
-                <p style="text-align:center;">
-                    <a href="./about.html">
-                        O firmie
-                    </a>
-                </p>
+                <a href="./about.html">
+                    O firmie
+                </a>
             </td>
             <td>
-                <p style="text-align:center;">
-                    <a href="./alpacas.html">
-                        Alpaki
-                    </a>
-                </p>
+                <a href="./alpacas.html">
+                    Alpaki
+                </a>
             </td>
             <td>
-                <p style="text-align:center;">
-                    <a href="./trade.html">
-                        Handel
-                    </a>
-                </p>
+                <a href="./trade.html">
+                    Handel
+                </a>
             </td>
             <td>
-                <p style="text-align:center;">
-                    <a href="./contact.html">
-                        Kontakt
-                    </a>
-                </p>
+                <a href="./contact.html">
+                    Kontakt
+                </a>
             </td>
             <td>
-                <p style="text-align:center;">
-                    <a href="./job.html">
-                        Praca
-                    </a>
-                </p>
+                <a href="./job.html">
+                    Praca
+                </a>
             </td>
             <td>
-                <p style="text-align:center;">
-                    <a href="./companies.html">
-                        Dla firm
-                    </a>
-                </p>
+                <a href="./companies.html">
+                    Dla firm
+                </a>
             </td>
             <td>
-                <p style="text-align:center;">
-                    <a href="./fun.html">
-                        Rozrywka
-                    </a>
-                </p>
+                <a href="./fun.html">
+                    Rozrywka
+                </a>
             </td>
         </tr>
     </table>
@@ -85,7 +65,8 @@
 
 
 <h2 style="text-align: center">Strona umożliwiająca współpracę z firmami</h2>
-<p style="text-align: center">Jeśli prowadzisz dobrze prosperującą firme i chcesz nawiązać z nami współpracę - wypełnij nasz formularz!</p>
+<p style="text-align: center">Jeśli prowadzisz dobrze prosperującą firme i chcesz nawiązać z nami współpracę - wypełnij
+    nasz formularz!</p>
 
 
 <!--offer form-->
@@ -94,9 +75,10 @@
         Nazwa firmy: <input type="text" name="name" placeholder="nazwa firmy" autofocus><br>
         Data powstania: <input type="month" name="date" required><br>
         Doświadczenie w hodowli zwierząt: min<input type="range" name="experience">max<br>
-        Tematyka firmy(tagi po przecinku): <input type="search" name="tags" placeholder="gastronomia, dowóz" required><br>
+        Tematyka firmy(tagi po przecinku): <input type="search" name="tags" placeholder="gastronomia, dowóz"
+                                                  required><br>
         Adres strony: <input type="url" name="website" placeholder="http://www.przyklad.pl" required><br>
-        Kolor przewodni logo firmy: <input type="color" name="color" ><br>
+        Kolor przewodni logo firmy: <input type="color" name="color"><br>
         <input type="submit" style="margin-top: 20px">
     </div>
 </form>
