@@ -5,6 +5,37 @@
     <title>Strona główna</title>
     <meta name="description" content="Strona startowa firmy Polskie Alpaki">
     <meta name="keywords" content="start, firma, Polskie Alpaki">
+    <style type="text/css">
+        td p {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: larger;
+        }
+
+        .table-navbar {
+            margin-right: auto;
+            margin-left: auto;
+            border: 5px double black;
+        }
+
+        .table-navbar td {
+            width: 200px;
+        }
+
+        #header {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 350px;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,7 +43,7 @@
 <section id="1">
     <header>
         <h2>
-            <a href="./index.html" style="text-decoration: none">
+            <a href="./index.html">
                 <img src="../res/image/logo.png" alt="logo" width="50" height="50">
                 <span style="font-size: xx-large">Polskie Alpaki&trade;</span>
             </a>
@@ -22,74 +53,67 @@
 
 <!--navbar-->
 <nav>
-<table style="margin-right: auto;margin-left: auto;border: 5px double black;">
-    <col style="width: 200px">
-    <col style="width: 200px">
-    <col style="width: 200px">
-    <col style="width: 200px">
-    <col style="width: 200px">
-    <col style="width: 200px">
-    <col style="width: 200px">
-    <tr>
-        <td>
-            <p style="text-align:center;">
-                <a href="./about.html">
-                    O firmie
-                </a>
-            </p>
-        </td>
-        <td>
-            <p style="text-align:center;">
-                <a href="./alpacas.html">
-                    Alpaki
-                </a>
-            </p>
-        </td>
-        <td>
-            <p style="text-align:center;">
-                <a href="./trade.html">
-                    Handel
-                </a>
-            </p>
-        </td>
-        <td>
-            <p style="text-align:center;">
-                <a href="./contact.html">
-                    Kontakt
-                </a>
-            </p>
-        </td>
-        <td>
-            <p style="text-align:center;">
-                <a href="./job.html">
-                    Praca
-                </a>
-            </p>
-        </td>
-        <td>
-            <p style="text-align:center;">
-                <a href="./companies.html">
-                    Dla firm
-                </a>
-            </p>
-        </td>
-        <td>
-            <p style="text-align:center;">
-                <a href="./fun.html">
-                    Rozrywka
-                </a>
-            </p>
-        </td>
-    </tr>
-</table>
+    <table class="table-navbar">
+        <tr>
+            <td>
+                <p>
+                    <a href="./about.html">
+                        O firmie
+                    </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="./alpacas.html">
+                        Alpaki
+                    </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="./trade.html">
+                        Handel
+                    </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="./contact.html">
+                        Kontakt
+                    </a>
+                </p>
+            </td>
+            <td class="td-navbar">
+                <p>
+                    <a href="./job.html">
+                        Praca
+                    </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="./companies.html">
+                        Dla firm
+                    </a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a href="./fun.html">
+                        Rozrywka
+                    </a>
+                </p>
+            </td>
+        </tr>
+    </table>
 </nav>
 
 <!--image and info-->
 <section id="3">
-    <h1 style="text-align: center;margin-top: 50px">Poznaj Alpaki juz dziś!</h1>
+    <h1 id="header">Poznaj Alpaki juz dziś!</h1>
     <section id="3.1">
         <div style="float: right;margin-right: 100px">
-            <h2>Nasze podopieczne</h2>
+            <h2 style="font-size: 150%;">Nasze podopieczne</h2>
             <p>
                 <img src="../res/image/all1.jpg" alt="Hodowla" height="400" width="600">
             </p>
@@ -97,10 +121,10 @@
     </section>
     <section id="3.2">
         <div style="margin-left: 100px;margin-top: 50px">
-            <h2>O naszej stronie</h2>
+            <h2 style="font-size: 24px">O naszej stronie</h2>
             <article>
                 <header>
-                    <h3>Czego możesz się dowiedzieć?</h3>
+                    <h3 style="font-size: 13pt;">Czego możesz się dowiedzieć?</h3>
                 </header>
                 <ul>
                     <li>Informacje na temat alpak oraz ich hodowli</li>
@@ -114,7 +138,7 @@
 </section>
 
 <footer>
-    <p style="text-align: center; margin-top: 350px">Copyright 2017</p>
+    <p>Copyright 2017</p>
 </footer>
 
 </body>
