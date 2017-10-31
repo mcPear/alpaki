@@ -19,59 +19,29 @@
     </style>
 </head>
 <body>
-<!--logo-->
-<section id="1">
-    <header>
-        <h2>
-            <a href="./index.html" style="text-decoration: none">
-                <img src="../res/image/logo.png" alt="logo" width="50" height="50">
-                <span style="font-size: xx-large">Polskie Alpaki&trade;</span>
-            </a>
-        </h2>
-    </header>
-</section>
 
 <!--navbar-->
 <nav>
-    <table class="table-navbar">
-        <tr>
-            <td>
-                <a href="./about.html">
-                    O firmie
-                </a>
-            </td>
-            <td>
-                <a href="./alpacas.html">
-                    Alpaki
-                </a>
-            </td>
-            <td>
-                <a href="./trade.html">
-                    Handel
-                </a>
-            </td>
-            <td>
-                <a href="./contact.html">
-                    Kontakt
-                </a>
-            </td>
-            <td>
-                <a href="./job.html">
-                    Praca
-                </a>
-            </td>
-            <td>
-                <a href="./companies.html">
-                    Dla firm
-                </a>
-            </td>
-            <td class="td-active">
-                <a href="./fun.html">
-                    Rozrywka
-                </a>
-            </td>
-        </tr>
-    </table>
+    <ul class="ul-navabar">
+        <li style="float: left">
+            <a href="./index.html">
+                <img src="../res/image/logo2.png" alt="logo" width="45" height="45">
+                <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black">Polskie Alpaki&trade;</span>
+            </a>
+        </li>
+        <li><a style="padding: 30px" href="./about.html">O firmie</a></li>
+        <li><a style="padding: 30px" href="./alpacas.html">Alpaki</a></li>
+        <li><a style="padding: 30px" href="./contact.html">Kontakt</a></li>
+        <li><a style="padding: 30px" href="./fun.html">Rozrywka</a></li>
+        <li class="dropdown">
+            <a style="padding: 30px" href="#" class="dropbtn">Handel</a>
+            <div class="dropdown-content">
+                <a href="./job.html">Praca</a>
+                <a href="./companies.html">Dla firm</a>
+                <a href="./trade.html">Handel</a>
+            </div>
+        </li>
+    </ul>
 </nav>
 
 <section style="margin-left: 100px">

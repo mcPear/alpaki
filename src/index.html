@@ -7,10 +7,6 @@
     <meta name="keywords" content="start, firma, Polskie Alpaki">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <style type="text/css">
-        body {
-            background-image: url("../res/image/background_image.jpg");
-        }
-
         a {
             text-decoration: none;
             font-size: larger;
@@ -30,65 +26,37 @@
         footer {
             position: absolute;
             top: 800px;
-            left:45%;
+            left: 45%;
         }
+
     </style>
 </head>
 <body>
 
-<!--logo-->
-<section id="1">
-    <header>
-        <h2>
-            <a href="./index.html">
-                <img src="../res/image/logo.png" alt="logo" width="50" height="50">
-                <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps">Polskie Alpaki&trade;</span>
-            </a>
-        </h2>
-    </header>
-</section>
-
 <!--navbar-->
 <nav>
-    <table class="table-navbar">
-        <tr>
-            <td>
-                <a href="./about.html">
-                    O firmie
+    <ul class="ul-navabar">
+        <li style="float: left">
+            <p style="margin: 0;padding: 0">
+                <a href="./index.html">
+                    <img src="../res/image/logo2.png" alt="logo" width="45" height="45">
+                    <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black">Polskie Alpaki&trade;</span>
                 </a>
-            </td>
-            <td>
-                <a href="./alpacas.html">
-                    Alpaki
-                </a>
-            </td>
-            <td>
-                <a href="./trade.html">
-                    Handel
-                </a>
-            </td>
-            <td>
-                <a href="./contact.html">
-                    Kontakt
-                </a>
-            </td>
-            <td>
-                <a href="./job.html">
-                    Praca
-                </a>
-            </td>
-            <td>
-                <a href="./companies.html">
-                    Dla firm
-                </a>
-            </td>
-            <td>
-                <a href="./fun.html">
-                    Rozrywka
-                </a>
-            </td>
-        </tr>
-    </table>
+            </p>
+        </li>
+        <li><a style="padding: 30px" href="./about.html">O firmie</a></li>
+        <li><a style="padding: 30px" href="./alpacas.html">Alpaki</a></li>
+        <li><a style="padding: 30px" href="./contact.html">Kontakt</a></li>
+        <li><a style="padding: 30px" href="./fun.html">Rozrywka</a></li>
+        <li class="dropdown">
+            <a style="padding: 30px" href="#" class="dropbtn">Handel</a>
+            <div class="dropdown-content">
+                <a href="./job.html">Praca</a>
+                <a href="./companies.html">Dla firm</a>
+                <a href="./trade.html">Handel</a>
+            </div>
+        </li>
+    </ul>
 </nav>
 
 <!--image and info-->

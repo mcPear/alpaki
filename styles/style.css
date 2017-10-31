@@ -1,41 +1,57 @@
 /*styles*/
-
-.table-navbar {
-    margin-right: auto;
-    margin-left: auto;
-    border-width: 5px;
-    border-style: solid;
-    border-color: blueviolet;
-    background-color: white;
-}
-
-.table-navbar td {
-    width: 200px;
-    /*height: 50px;*/
-    padding: 20px;
-    background-color: white;
-    text-align: center;
-}
-
-td > a{
-    text-decoration: none;
-    font-size: larger;
-    font-family: "Calibri";
-    font-weight: bold;
-}
-
-.table-navbar td:hover {
-    background-color: orchid;
-}
-.table-navbar td:hover a {
-    color: white;
-}
-td.td-active{
-    background-color: orchid;
-}
-td.td-active a {
-    color: white;
-}
 body{
     background-image: url("../res/image/background_image.jpg");
+    margin: 0;
+}
+
+/***********************/
+/*******navbar**********/
+/***********************/
+.ul-navabar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+.ul-navabar li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+li > a:hover, .dropdown:hover .dropbtn {
+    background-color: gray;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: black;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.ul-navabar a{
+    text-decoration: none;
+    font-size: larger;
 }
