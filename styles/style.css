@@ -1,7 +1,14 @@
 /*styles*/
+
 body{
     background-image: url("../res/image/background_image.jpg");
+    background-color: lightgray;
     margin: 0;
+}
+footer {
+    position:fixed;
+    bottom:0;
+    margin-left: 3em;
 }
 
 /***********************/
@@ -26,14 +33,14 @@ li a, .dropbtn {
     padding: 14px 16px;
 }
 
-li > a:hover, .dropdown:hover .dropbtn {
+ul.ul-navabar li > a:hover, .dropdown:hover .dropbtn {
     background-color: gray;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #f2f2f2;
     min-width: 160px;
 }
 
