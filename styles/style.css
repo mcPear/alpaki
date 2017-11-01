@@ -1,64 +1,85 @@
 /*styles*/
 
-body{
+body {
     background-image: url("../res/image/background_image.jpg");
     background-color: lightgray;
     margin: 0;
 }
+
 footer {
-    position:fixed;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     margin-left: 3em;
 }
 
 /***********************/
 /*******navbar**********/
 /***********************/
-.ul-navabar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: lightgray;
-}
-
-.ul-navabar li {
+nav ul li {
     float: right;
 }
 
-li a, .dropbtn {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: lightgray;
 }
 
-ul.ul-navabar li > a:hover, .dropdown:hover .dropbtn {
-    background-color: gray;
+nav ul li {
+    display: block;
+    position: relative;
+    background: lightgray;
 }
 
-.dropdown-content {
+li ul {
     display: none;
-    position: absolute;
-    background-color: #f2f2f2;
-    min-width: 160px;
 }
 
-.dropdown-content a {
-    color: black;
+.main-navigation li a {
     display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: lightgray;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.ul-navabar a{
+    padding: 1em;
     text-decoration: none;
+    white-space: nowrap;
     font-size: larger;
+    color: white;
+}
+
+.main-navigation li > a:hover {
+    background: darkgray;
+}
+
+li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+li:hover li {
+    float: none;
+}
+
+.main-navigation li:hover > a {
+    background: darkgray;
+}
+
+li:hover li a:hover {
+    background: #2c3e50;
+}
+
+.main-navigation li ul li {
+    border-top: 0;
+}
+
+ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+ul:before, ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+ul:after {
+    clear: both;
 }
