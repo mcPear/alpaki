@@ -98,9 +98,38 @@ th, td {
     padding: 15px;
 }
 
-a[content="fun"] {
+a[content="fun"]:link {
     color: brown;
     text-decoration: none;
+}
+
+a[content="fun"]:active {
+    color: crimson;
+    text-decoration: none;
+}
+
+a[content="fun"]:visited {
+    color: chocolate;
+    text-decoration: none;
+}
+
+a[content="fun"]:hover {
+    color: darkred;
+    text-decoration: none;
+}
+
+input:checked {
+    height: 30px;
+    width: 30px;
+}
+
+input:disabled {
+    height: 5px;
+    width: 5px;
+}
+
+p:empty {
+    background-color: antiquewhite;
 }
 
 @media screen and (max-width: 600px) {
