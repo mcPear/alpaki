@@ -97,3 +97,8 @@ th, td {
     text-align: center;
     padding: 15px;
 }
+
+a[content="fun"] {
+    color: brown;
+    text-decoration: none;
+}
