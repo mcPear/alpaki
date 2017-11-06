@@ -83,3 +83,17 @@ ul:before, ul:after {
 ul:after {
     clear: both;
 }
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+    border: 1px solid lightslategrey;
+    background-color: azure;
+}
+
+th, td {
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    padding: 15px;
+}
