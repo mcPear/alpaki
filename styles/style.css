@@ -145,3 +145,7 @@ p:empty {
         background-color: white;
     }
 }
+
+.red-shadow {
+    text-shadow: 2px 2px #FF0000;
+}
