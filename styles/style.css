@@ -264,4 +264,23 @@ div[rotate="-9deg"]{
     transform: rotate(-9deg);
 }
 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: auto;
+    height: 200px;
+}
 
+.flex-item {
+    color: transparent;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.flex-item:hover {
+    color: black;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+}
