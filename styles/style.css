@@ -284,3 +284,17 @@ div[rotate="-9deg"]{
     height: 400px;
     margin: 10px;
 }
+
+.newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    -webkit-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Firefox */
+    column-rule: 4px outset rgba(204, 102, 17, 0.4);
+}
