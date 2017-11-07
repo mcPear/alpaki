@@ -150,11 +150,12 @@ p:empty {
     text-shadow: 2px 2px #FF0000;
 }
 
-div.rounded-border {
+div.rounded-shaded-border {
     border: 2px solid saddlebrown;
     border-radius: 25px;
     margin: 10px;
     padding: 10px;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 aside {
@@ -163,4 +164,8 @@ aside {
 
 footer {
     color: hsla(20, 30%, 20%, 0.9);
+}
+
+section {
+    margin-left: 100px;
 }
