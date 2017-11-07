@@ -149,3 +149,10 @@ p:empty {
 .red-shadow {
     text-shadow: 2px 2px #FF0000;
 }
+
+div.rounded-border {
+    border: 2px solid saddlebrown;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+}
