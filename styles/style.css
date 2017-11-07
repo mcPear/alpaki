@@ -12,6 +12,10 @@ footer {
     margin-left: 3em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
 /***********************/
 /*******navbar**********/
 /***********************/
@@ -168,4 +172,20 @@ footer {
 
 section {
     margin-left: 100px;
+}
+
+#grad-bottom-right {
+    background: rgba(255, 238, 204); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Fx 3.6-15*/
+    background: linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Standard*/
+}
+
+#grad-bottom {
+    background: rgba(255, 238, 204); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Fx 3.6-15*/
+    background: linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Standard*/
 }
