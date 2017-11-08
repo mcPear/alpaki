@@ -210,13 +210,18 @@ section {
 
 .wood_border {
     /*border-image-source: url("../res/image/wood.jpg");*/
-    /*border: 20px solid;*/
+    border: 20px solid;
     /*padding: 15px;*/
     /*border-image-slice: 60;*/
     /*border-image-repeat: stretch;*/
     /*-webkit-border-image: url("../res/image/border.png") 30 round; !* Safari 3.1-5 *!*/
     /*-o-border-image: url("../res/image/border.png") 30 round; !* Opera 11-12.1 *!*/
     /*border-image: url("../res/image/border.png") 30 round;*/
+
+    -webkit-border-image: url("../res/image/wood.jpg") 15 15 15 15 repeat;
+    -moz-border-image: url("../res/image/wood.jpg") 15 15 15 15 repeat;
+    -o-border-image: url("../res/image/wood.jpg") 15 15 15 15 repeat;
+    border-image: url("../res/image/wood.jpg") 15 15 15 15 repeat;
 }
 
 img.growing_animation {
