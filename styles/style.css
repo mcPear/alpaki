@@ -290,16 +290,42 @@ div[rotate="-9deg"]{
     margin: 10px;
 }
 
-.newspaper {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+@media handheld and (max-width: 480px),
+screen and (max-device-width: 480px),
+screen and (max-width: 480px) {
+    .newspaper {
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px){
+    .newspaper {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
 
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
 
-    -webkit-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Chrome, Safari, Opera */
-    -moz-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Firefox */
-    column-rule: 4px outset rgba(204, 102, 17, 0.4);
+        -webkit-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Chrome, Safari, Opera */
+        -moz-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Firefox */
+        column-rule: 4px outset rgba(204, 102, 17, 0.4);
+    }
+}
+@media only screen and (min-width: 1025px){
+    .newspaper {
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+
+        -webkit-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Chrome, Safari, Opera */
+        -moz-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Firefox */
+        column-rule: 4px outset rgba(204, 102, 17, 0.4);
+    }
 }
