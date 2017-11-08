@@ -170,6 +170,7 @@ div.rounded-shaded-border {
     margin: 10px;
     padding: 10px;
     box-shadow: 10px 10px 5px #888888;
+    margin-left: -3em;
 }
 
 aside {
@@ -180,7 +181,7 @@ section {
     margin-left: 100px;
 }
 
-#grad-bottom-right {
+.grad-bottom-right {
     background: rgba(255, 238, 204, 0.4); /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
     background: -o-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
@@ -188,7 +189,7 @@ section {
     background: linear-gradient(to bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Standard*/
 }
 
-#grad-bottom {
+.grad-bottom {
     background: rgba(255, 238, 204, 0.4); /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
     background: -o-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
@@ -246,13 +247,13 @@ img.growing_animation:hover {
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% { left:0px; top:0px;}
-}
+/*@-webkit-keyframes example {*/
+    /*0%   {left:0px; top:0px;}*/
+    /*25%  {left:200px; top:0px;}*/
+    /*50%  {left:200px; top:200px;}*/
+    /*75%  {left:0px; top:200px;}*/
+    /*100% { left:0px; top:0px;}*/
+/*}*/
 
 /* Standard syntax */
 @keyframes example {
@@ -290,6 +291,9 @@ div[rotate="-9deg"]{
     margin: 10px;
 }
 
+/************************************************************************/
+/*zmiana ilosci kolumn na w zaleznosci od rozdzielczosci na alpacas.html*/
+/************************************************************************/
 @media handheld and (max-width: 480px),
 screen and (max-device-width: 480px),
 screen and (max-width: 480px) {
