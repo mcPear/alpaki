@@ -146,14 +146,14 @@ p:empty {
     background-color: antiquewhite;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     body {
         background-image: none;
         background-color: white;
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 500px) {
     body {
         background-image: none;
         background-color: white;
@@ -332,4 +332,7 @@ screen and (max-width: 480px) {
         -moz-column-rule: 4px outset rgba(204, 102, 17, 0.4); /* Firefox */
         column-rule: 4px outset rgba(204, 102, 17, 0.4);
     }
+}
+*{
+    font-family: 'Lobster', cursive;
 }
