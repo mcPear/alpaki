@@ -58,7 +58,7 @@ li ul {
     background: darkgray;
 }
 
-li:hover > ul {
+nav li:hover > ul {
     display: block;
     position: absolute;
 }
@@ -92,6 +92,9 @@ ul:before, ul:after {
 ul:after {
     clear: both;
 }
+/*************************************************/
+/*************************************************/
+
 
 table {
     margin-right: auto;
