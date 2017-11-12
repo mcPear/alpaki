@@ -37,7 +37,6 @@
     </ul>
 </nav>
 
-
 <h2 style="text-align: center">Strona dla przyszłych pracowników naszej firmy</h2>
 <p style="text-align: center">Jeśli poszukujesz pracy przy hodowli, lubisz zwierzęta i masz z nimi dobry kontakt to
     zgłoś się do nas !</p>
@@ -46,8 +45,8 @@
 <!--offer form-->
 <form action="/action_page.php" autocomplete="on">
     <div style="width: 600px;display: block;margin-left: auto;margin-right: auto" class = rounded-shaded-border id = grad-bottom-right>
-        Imię: <input type="text" name="fname" autofocus><br>
-        Nazwisko: <input type="text" name="lname" required><br>
+        Imię: <input type="text" name="fname" id="firstName" autofocus><br>
+        Nazwisko: <input type="text" name="lname" id="lastName" required><br>
         E-mail: <input type="email" name="email" required><br>
         Miesiąc urodzenia: <input list="months" name="months">
         <datalist id="months">
@@ -83,5 +82,22 @@
     <p>Copyright 2017</p>
 </footer>
 
+<script type="text/javascript">
+    var firstName;
+    var lastName;
+
+    function getValuesFromUser() {
+        firstName = window.prompt("Podaj imie");
+        lastName = window.prompt("Podaj nazwisko");
+    }
+
+    function setValues() {
+        document.getElementById("firstName").setAttribute("value",firstName);
+        document.getElementById("lastName").setAttribute("value",lastName);
+    }
+    getValuesFromUser();
+    setValues();
+
+</script>
 </body>
 </html>

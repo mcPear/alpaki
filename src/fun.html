@@ -18,6 +18,9 @@
             line-height: 30px;
         }
     </style>
+    <script type="text/javascript">
+        window.alert("Uwaga, wchodzisz na stronę z niebezpieczną zawartością");
+    </script>
 </head>
 <body>
 
@@ -93,8 +96,25 @@
 
 <img src="../res/image/alpaca.gif" class="growing_animation" alt="Animacja">
 
+<h2>Wylosuj swoją alpakę</h2>
+<button id="button" style="margin:0 auto;display:block;">Spróbuj</button>
+<img id="alpacaImg" src="../res/image/questionMark.png" width="50" height="50" alt="alpaca?" style="display:block;margin:auto;margin-top: 2em;margin-bottom: 2em">
+
 <footer>
     <p>Copyright 2017</p>
 </footer>
+
+<script type="text/javascript">
+    var alpacaImg;
+    var button = document.getElementById("button");
+    button.addEventListener("click",draw,false);
+    var alpacaImg = document.getElementById("alpacaImg");
+
+    function draw() {
+        var imgNumber = Math.floor(1 + Math.random() * 5);
+        alpacaImg.setAttribute("src","../res/image/a"+imgNumber+".jpg");
+    }
+
+</script>
 </body>
 </html>
