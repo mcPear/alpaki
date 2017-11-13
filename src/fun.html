@@ -14,7 +14,8 @@
             background-attachment: fixed;
             background-color: white;
         }
-        p{
+
+        p {
             line-height: 30px;
         }
     </style>
@@ -53,66 +54,115 @@
 </nav>
 
 <section>
-    <div class = "rounded-shaded-border grad-bottom">
-    <h2>Strefa rozrywki do pobrania</h2>
-    <ul>
-        <li>
-            <a href="https://media.giphy.com/media/VNm9oziNiWm64/giphy.gif" content="fun" download>Szturm alpak</a>
-        </li>
-        <li>
-            <a href="ftp://media.giphy.com/media/VNm9oziNiWm64/giphy.gif" content="fun" download>Szturm alpak ftp</a>
-        </li>
-    </ul>
+    <div class="rounded-shaded-border grad-bottom">
+        <h2>Strefa rozrywki do pobrania</h2>
+        <ul>
+            <li>
+                <a href="https://media.giphy.com/media/VNm9oziNiWm64/giphy.gif" content="fun" download>Szturm alpak</a>
+            </li>
+            <li>
+                <a href="ftp://media.giphy.com/media/VNm9oziNiWm64/giphy.gif" content="fun" download>Szturm alpak
+                    ftp</a>
+            </li>
+        </ul>
     </div>
 </section>
 
 <section>
-   <div class = "rounded-shaded-border grad-bottom">
-    <h2>Ciekawostki</h2>
-    <details>
-        <summary>Alpaki mają trzy powieki</summary>
-        <p>Trzecia powieka to tzw. migotka, która porusza się w poziomie</p>
-    </details>
-    <details>
-        <summary>Alpaki są wykorzystywane w alpakoterapii</summary>
-        <p>Zdaniem terapeutów kontakt z tymi zwierzętami pomaga w walce z nadciśnieniem, autyzmem czy depresją. Poza tym
-            spędzanie czasu z alpaką ma pomóc dzieciom oswoić się ze zwierzętami i nauczyć, jak je traktować</p>
-    </details>
-    <details>
-        <summary>Alpaki przypominają lamy</summary>
-        <p>Są jednak od nich mniejsze i mają duża grubszą wełnę. Z wyglądu przypominają trochę przerośnięte owce z
-            długimi szyjami albo żywe maskotki</p>
-    </details>
-    <aside style="position: relative;bottom: -3em;">
-        <small>Podane informacje potwierdzone i akceptowalne w środowisku hodowców alpak</small>
-    </aside>
+    <div class="rounded-shaded-border grad-bottom">
+        <h2>Ciekawostki</h2>
+        <details>
+            <summary>Alpaki mają trzy powieki</summary>
+            <p>Trzecia powieka to tzw. migotka, która porusza się w poziomie</p>
+        </details>
+        <details>
+            <summary>Alpaki są wykorzystywane w alpakoterapii</summary>
+            <p>Zdaniem terapeutów kontakt z tymi zwierzętami pomaga w walce z nadciśnieniem, autyzmem czy depresją. Poza
+                tym
+                spędzanie czasu z alpaką ma pomóc dzieciom oswoić się ze zwierzętami i nauczyć, jak je traktować</p>
+        </details>
+        <details>
+            <summary>Alpaki przypominają lamy</summary>
+            <p>Są jednak od nich mniejsze i mają duża grubszą wełnę. Z wyglądu przypominają trochę przerośnięte owce z
+                długimi szyjami albo żywe maskotki</p>
+        </details>
+        <aside style="position: relative;bottom: -3em;">
+            <small>Podane informacje potwierdzone i akceptowalne w środowisku hodowców alpak</small>
+        </aside>
     </div>
 </section>
 
-<div  style="transform: rotate(-9deg);">
-<h1 >Don't touch flying alpaca</h1>
-<h1>It will fly away</h1>
+<div style="transform: rotate(-9deg);">
+    <h1>Don't touch flying alpaca</h1>
+    <h1>It will fly away</h1>
+    <h1>Better try to move the standing one</h1>
 </div>
 
-<img src="../res/image/alpaca.gif" class="growing_animation" alt="Animacja">
+<img src="../res/image/alpaca.gif" class="growing_animation" alt="Alpaka samolatająca ">
+<img id="alpacaToMove" src="../res/image/alpaca.gif" style="left: 100px; top: 100px; width: 100px; height: 100px; position: absolute" alt="Alpaka do ruszania">
 
 <h2>Wylosuj swoją alpakę</h2>
 <button id="button" style="margin:0 auto;display:block;">Spróbuj</button>
-<img id="alpacaImg" src="../res/image/questionMark.png" width="50" height="50" alt="alpaca?" style="display:block;margin:auto;margin-top: 2em;margin-bottom: 2em">
+<img id="alpacaImg" src="../res/image/questionMark.png" width="50" height="50" alt="alpaca?"
+     style="display:block;margin:auto;margin-top: 2em;margin-bottom: 2em">
 
 <footer>
     <p>Copyright 2017</p>
 </footer>
 
 <script type="text/javascript">
+    var alpaca = document.getElementById("alpacaToMove");
+    window.addEventListener("keydown", moveAlpaca, false);
+
+    function addPixels(pixels, numberToAdd) {
+        return parseInt(pixels) + numberToAdd + "px"
+    }
+
+    function moveAlpaca() {
+        var event = window.event;
+        var left, top = 0;
+        if (event) {
+            switch (event.keyCode) {
+                case 37:
+                    left = alpaca.style.left;
+                    left = addPixels(left, -10);
+                    alpaca.style.left = left;
+                    break;
+                case 38:
+                    top = alpaca.style.top;
+                    top = addPixels(top, -10);
+                    alpaca.style.top = top;
+                    break;
+                case 39:
+                    console.log(alpaca.style);
+                    left = alpaca.style.left;
+                    console.log(left);
+                    left = addPixels(left, 10);
+                    console.log(left);
+                    alpaca.style.left = left;
+                    console.log(alpaca.style.left);
+                    break;
+                case 40:
+                    top = alpaca.style.top;
+                    top = addPixels(top, 10);
+                    alpaca.style.top = top;
+                    break;
+                default:
+                    console.log("not supported event key pressed: " + event.keyCode)
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
     var alpacaImg;
     var button = document.getElementById("button");
-    button.addEventListener("click",draw,false);
+    button.addEventListener("click", draw, false);
     var alpacaImg = document.getElementById("alpacaImg");
 
     function draw() {
         var imgNumber = Math.floor(1 + Math.random() * 5);
-        alpacaImg.setAttribute("src","../res/image/a"+imgNumber+".jpg");
+        alpacaImg.setAttribute("src", "../res/image/a" + imgNumber + ".jpg");
     }
 
 </script>
