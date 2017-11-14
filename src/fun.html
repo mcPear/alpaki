@@ -101,7 +101,7 @@
 <img src="../res/image/alpaca.gif" class="growing_animation" alt="Alpaka samolatająca ">
 <img id="alpacaToMove" src="../res/image/alpaca.gif" style="left: 100px; top: 100px; width: 100px; height: 100px; position: absolute" alt="Alpaka do ruszania">
 
-<h2>Wylosuj swoją alpakę</h2>
+<h2 id="drawText">Tekst dotyczacy losowania</h2>
 <button id="button" style="margin:0 auto;display:block;">Spróbuj</button>
 <img id="alpacaImg" src="../res/image/questionMark.png" width="50" height="50" alt="alpaca?"
      style="display:block;margin:auto;margin-top: 2em;margin-bottom: 2em">
@@ -165,6 +165,8 @@
         alpacaImg.setAttribute("src", "../res/image/a" + imgNumber + ".jpg");
     }
 
+    document.writeln("Wszelkie prawa zastrzeżone");
+    document.getElementById("drawText").innerHTML = "Wylosuj swoja alpake";
 </script>
 </body>
 </html>
