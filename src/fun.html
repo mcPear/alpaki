@@ -114,63 +114,7 @@
 <footer>
     <p>Copyright 2017</p>
 </footer>
-<script type="text/javascript">
-    var alpaca = document.getElementById("alpacaToMove");
-    window.addEventListener("keydown", moveAlpaca, false);
 
-    function changeProperties() {
-        var backgroundColorFromUser = document.getElementById("backgroundColor").value;
-        var textColorFromUser = document.getElementById("textColor").value;
-        var fontSelect = document.getElementById("font");
-        var fontFromUser =  fontSelect.options[fontSelect.selectedIndex].value;
-        console.log(fontFromUser);
-        document.body.style.backgroundColor = backgroundColorFromUser;
-        document.body.style.color = textColorFromUser;
-        document.body.style.fontFamily = fontFromUser;
-
-    }
-
-    function addPixels(pixels, numberToAdd) {
-        return parseInt(pixels) + numberToAdd + "px"
-    }
-
-    function moveAlpaca() {
-        var event = window.event;
-        var left, top = 0;
-        if (event) {
-            switch (event.keyCode) {
-                case 37:
-                    left = alpaca.style.left;
-                    left = addPixels(left, -10);
-                    alpaca.style.left = left;
-                    break;
-                case 38:
-                    top = alpaca.style.top;
-                    top = addPixels(top, -10);
-                    alpaca.style.top = top;
-                    break;
-                case 39:
-                    console.log(alpaca.style);
-                    left = alpaca.style.left;
-                    console.log(left);
-                    left = addPixels(left, 10);
-                    console.log(left);
-                    alpaca.style.left = left;
-                    console.log(alpaca.style.left);
-                    break;
-                case 40:
-                    top = alpaca.style.top;
-                    top = addPixels(top, 10);
-                    alpaca.style.top = top;
-                    break;
-                default:
-                    console.log("not supported event key pressed: " + event.keyCode)
-            }
-        }
-
-    }
-</script>
-
-<script src="../scripts/randomAlpaca.js" language=javascript type="text/javascript"></script>
+<script src="../scripts/funScript.js" language=javascript type="text/javascript"></script>
 </body>
 </html>
