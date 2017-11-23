@@ -19,9 +19,7 @@
             line-height: 30px;
         }
     </style>
-    <script type="text/javascript">
-        window.alert("Uwaga, wchodzisz na stronę z niebezpieczną zawartością");
-    </script>
+
 </head>
 <body>
 
@@ -99,15 +97,38 @@
 </div>
 
 <img src="../res/image/alpaca.gif" class="growing_animation" alt="Alpaka samolatająca ">
-<img id="alpacaToMove" src="../res/image/alpaca.gif" style="left: 100px; top: 100px; width: 100px; height: 100px; position: absolute" alt="Alpaka do ruszania">
+<img id="alpacaToMove" src="../res/image/alpaca.gif"
+     style="left: 100px; top: 100px; width: 100px; height: 100px; position: absolute" alt="Alpaka do ruszania">
+
+<div align="center">
+        <label for="backgroundColor">Podaj kolor tła </label><input type="text" id="backgroundColor"><br>
+        <label for="textColor">Podaj kolor tekstu </label><input type="text" id="textColor"><br>
+        <label>Wybierz czcionkę</label><select id="font">
+            <option value="Arial">Arial</option>
+            <option value="Impact">Impact</option>
+            <option value="Mongolian Baiti">Mongolian Baiti</option>
+        </select>
+        <button onclick="changeProperties()">Zmień</button>
+</div>
 
 <footer>
     <p>Copyright 2017</p>
 </footer>
-
 <script type="text/javascript">
     var alpaca = document.getElementById("alpacaToMove");
     window.addEventListener("keydown", moveAlpaca, false);
+
+    function changeProperties() {
+        var backgroundColorFromUser = document.getElementById("backgroundColor").value;
+        var textColorFromUser = document.getElementById("textColor").value;
+        var fontSelect = document.getElementById("font");
+        var fontFromUser =  fontSelect.options[fontSelect.selectedIndex].value;
+        console.log(fontFromUser);
+        document.body.style.backgroundColor = backgroundColorFromUser;
+        document.body.style.color = textColorFromUser;
+        document.body.style.fontFamily = fontFromUser;
+
+    }
 
     function addPixels(pixels, numberToAdd) {
         return parseInt(pixels) + numberToAdd + "px"
@@ -146,6 +167,7 @@
                     console.log("not supported event key pressed: " + event.keyCode)
             }
         }
+
     }
 </script>
 
