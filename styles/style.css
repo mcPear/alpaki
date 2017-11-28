@@ -92,9 +92,9 @@ ul:before, ul:after {
 ul:after {
     clear: both;
 }
-/*************************************************/
-/*************************************************/
 
+/*************************************************/
+/*************************************************/
 
 table {
     margin-right: auto;
@@ -201,15 +201,15 @@ section {
 }
 
 /*div.wood_border_rounded_shaded {*/
-    /*border-radius: 25px;*/
-    /*margin: 10px;*/
-    /*padding: 10px;*/
-    /*box-shadow: 10px 10px 5px #888888;*/
-    /*border: 5px;*/
-    /*background-image: url("../res/image/wood.jpg");*/
-    /*background-repeat: no-repeat;*/
-    /*background-color: burlywood;*/
-    /*background-origin: padding-box;*/
+/*border-radius: 25px;*/
+/*margin: 10px;*/
+/*padding: 10px;*/
+/*box-shadow: 10px 10px 5px #888888;*/
+/*border: 5px;*/
+/*background-image: url("../res/image/wood.jpg");*/
+/*background-repeat: no-repeat;*/
+/*background-color: burlywood;*/
+/*background-origin: padding-box;*/
 /*}*/
 
 .wood_border {
@@ -251,23 +251,38 @@ img.growing_animation:hover {
 
 /* Safari 4.0 - 8.0 */
 /*@-webkit-keyframes example {*/
-    /*0%   {left:0px; top:0px;}*/
-    /*25%  {left:200px; top:0px;}*/
-    /*50%  {left:200px; top:200px;}*/
-    /*75%  {left:0px; top:200px;}*/
-    /*100% { left:0px; top:0px;}*/
+/*0%   {left:0px; top:0px;}*/
+/*25%  {left:200px; top:0px;}*/
+/*50%  {left:200px; top:200px;}*/
+/*75%  {left:0px; top:200px;}*/
+/*100% { left:0px; top:0px;}*/
 /*}*/
 
 /* Standard syntax */
 @keyframes example {
-    0%   { left:500px; top:-100px;}
-    25%  { left:900px; top:-100px;}
-    50%  { left:900px; top:-400px;}
-    75%  { left:500px; top:-400px;}
-    100% { left:500px; top:-100px;}
+    0% {
+        left: 500px;
+        top: -100px;
+    }
+    25% {
+        left: 900px;
+        top: -100px;
+    }
+    50% {
+        left: 900px;
+        top: -400px;
+    }
+    75% {
+        left: 500px;
+        top: -400px;
+    }
+    100% {
+        left: 500px;
+        top: -100px;
+    }
 }
 
-div[rotate="-9deg"]{
+div[rotate="-9deg"] {
     -ms-transform: rotate(-9deg); /* IE 9 */
     -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
     transform: rotate(-9deg);
@@ -297,16 +312,15 @@ div[rotate="-9deg"]{
 /************************************************************************/
 /*zmiana ilosci kolumn na w zaleznosci od rozdzielczosci na alpacas.html*/
 /************************************************************************/
-@media handheld and (max-width: 480px),
-screen and (max-device-width: 480px),
-screen and (max-width: 480px) {
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
     .newspaper {
         -webkit-column-count: 1; /* Chrome, Safari, Opera */
         -moz-column-count: 1; /* Firefox */
         column-count: 1;
     }
 }
-@media only screen and (min-width: 481px) and (max-width: 1024px){
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
     .newspaper {
         -webkit-column-count: 2; /* Chrome, Safari, Opera */
         -moz-column-count: 2; /* Firefox */
@@ -321,7 +335,8 @@ screen and (max-width: 480px) {
         column-rule: 4px outset rgba(204, 102, 17, 0.4);
     }
 }
-@media only screen and (min-width: 1025px){
+
+@media only screen and (min-width: 1025px) {
     .newspaper {
         -webkit-column-count: 3; /* Chrome, Safari, Opera */
         -moz-column-count: 3; /* Firefox */
@@ -346,3 +361,17 @@ screen and (max-width: 480px) {
     /*src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/cycBf3mfbGkh66G5NhszPQ.woff2) format('woff2');*/
     /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;*/
 /*}*/
+
+* {
+    font-family: 'Lobster', cursive;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/cycBf3mfbGkh66G5NhszPQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+

@@ -38,23 +38,27 @@
 </nav>
 
 <!--contact form-->
-<form action="#" method="post">
+<form action="#" method="post" onsubmit="confirmSubmit()" onreset="resetForm()">
     <h2 style="text-align: center">Skontaktuj się z nami</h2>
-    <div style="width: 300px;display: block;margin-left: auto;margin-right: auto">
+    <div class="form" style="width: auto;margin-left: auto;margin-right: auto; text-align: center">
+    <div id="firstNameDiv">
         <p>Imię :</p>
-        <input type="text" name="firstName" size="36">
-
+        <input id="firstName" type="text" name="firstName" size="36">
+        </div>
+    <div id="lastNameDiv" >
         <p>Nazwisko :</p>
-        <input type="text" name="lastName" size="36">
-
+        <input id="lastName" type="text" name="lastName" size="36">
+</div>
+<div id="emailDiv" >
         <p>Email :</p>
-        <input type="email" name="email" size="36">
-
+        <input id="email" type="email" name="email" size="36">
+</div>
+<div id="contentDiv" >
         <p>Treść :</p>
-        <textarea name="text" rows="4" cols="36" maxlength="200"></textarea>
-
-        <p style="text-align: center">
-            <input type="submit" value="Wyslij">
+        <textarea id="content" name="content" rows="4" cols="36" maxlength="200"></textarea>
+</div>
+        <p >
+            <input id="contactSubmit" type="submit" value="Wyslij">
             <input type="reset" value="Wyczyść">
         </p>
     </div>
@@ -68,6 +72,10 @@
 <footer>
     <p>Copyright 2017</p>
 </footer>
+
+<script src="../scripts/contactFormTooltips.js" language=javascript type="text/javascript"></script>
+
+<script src="../scripts/contactFormSubmitReset.js" language=javascript type="text/javascript"></script>
 
 </body>
 </html>
