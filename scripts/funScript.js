@@ -7,13 +7,13 @@ var headerText;
 var tryAgainText;
 var alpacaImg;
 
-function initializeRandomAlpacaTools(){
+function initializeRandomAlpacaTools() {
     initializeHeaderText();
     initializeButton();
     initializeAlpacaImg();
 }
 
-function initializeButton(){
+function initializeButton() {
     button = document.createElement("BUTTON");
     button.setAttribute("id", "button");
     button.setAttribute("style", "margin:0 auto;display:block;");
@@ -23,7 +23,7 @@ function initializeButton(){
     document.body.appendChild(button);
 }
 
-function initializeHeaderText(){
+function initializeHeaderText() {
     headerText = document.createElement("H2");
     headerText.setAttribute("id", "headerText");
     var innerText = document.createTextNode("Wylosuj swoja alpake");
@@ -46,7 +46,7 @@ function draw() {
     alpacaImg.setAttribute("src", "../res/image/a" + imgNumber + ".jpg");
 }
 
-function initializeAlpacaImg(){
+function initializeAlpacaImg() {
     alpacaImg = document.createElement("IMG");
     alpacaImg.setAttribute("id", "alpacaImg");
     alpacaImg.setAttribute("src", "../res/image/questionMark.png")
@@ -63,12 +63,15 @@ document.writeln("Wszelkie prawa zastrzeżone");
 
 var alpaca = document.getElementById("alpacaToMove");
 window.addEventListener("keydown", moveAlpaca, false);
+window.addEventListener("mousemove", moveAlpaca, false);
+alpaca.addEventListener("mouseover", hideAlpaca, false);
+alpaca.addEventListener("mouseout", showAlpaca, false);
 
 function changeProperties() {
     var backgroundColorFromUser = document.getElementById("backgroundColor").value;
     var textColorFromUser = document.getElementById("textColor").value;
     var fontSelect = document.getElementById("font");
-    var fontFromUser =  fontSelect.options[fontSelect.selectedIndex].value;
+    var fontFromUser = fontSelect.options[fontSelect.selectedIndex].value;
     console.log(fontFromUser);
     document.body.style.backgroundColor = backgroundColorFromUser;
     document.body.style.color = textColorFromUser;
@@ -80,38 +83,55 @@ function addPixels(pixels, numberToAdd) {
     return parseInt(pixels) + numberToAdd + "px"
 }
 
+function hideAlpaca() {
+    alpaca.style.visibility="hidden"
+}
+
+function showAlpaca() {
+    alpaca.style.visibility="visible"
+}
+
 function moveAlpaca() {
     var event = window.event;
     var left, top = 0;
     if (event) {
-        switch (event.keyCode) {
-            case 37:
-                left = alpaca.style.left;
-                left = addPixels(left, -10);
-                alpaca.style.left = left;
-                break;
-            case 38:
-                top = alpaca.style.top;
-                top = addPixels(top, -10);
-                alpaca.style.top = top;
-                break;
-            case 39:
-                console.log(alpaca.style);
-                left = alpaca.style.left;
-                console.log(left);
-                left = addPixels(left, 10);
-                console.log(left);
-                alpaca.style.left = left;
-                console.log(alpaca.style.left);
-                break;
-            case 40:
-                top = alpaca.style.top;
-                top = addPixels(top, 10);
-                alpaca.style.top = top;
-                break;
-            default:
-                console.log("not supported event key pressed: " + event.keyCode)
+
+        if (event.ctrlKey) {
+            alpaca.style.left = event.clientX + "px";
+            alpaca.style.top = event.clientY + "px";
         }
+        else {
+
+            switch (event.keyCode) {
+                case 37:
+                    left = alpaca.style.left;
+                    left = addPixels(left, -10);
+                    alpaca.style.left = left;
+                    break;
+                case 38:
+                    top = alpaca.style.top;
+                    top = addPixels(top, -10);
+                    alpaca.style.top = top;
+                    break;
+                case 39:
+                    console.log(alpaca.style);
+                    left = alpaca.style.left;
+                    console.log(left);
+                    left = addPixels(left, 10);
+                    console.log(left);
+                    alpaca.style.left = left;
+                    console.log(alpaca.style.left);
+                    break;
+                case 40:
+                    top = alpaca.style.top;
+                    top = addPixels(top, 10);
+                    alpaca.style.top = top;
+                    break;
+                default:
+                    console.log("not supported event key pressed: " + event.keyCode)
+            }
+        }
+
     }
 
 }
