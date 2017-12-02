@@ -7,6 +7,24 @@
     <meta name="keywords" content="praca, gospodarstwo, hodowla, weterynaria, opieka">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
+<style type="text/css">
+    label {
+        display: block;
+        float: left;
+        width: 100px;
+        text-align: center;
+    }
+
+    div {
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    /*input[type=radio] {*/
+    /*width: 100%;*/
+    /*height: 1em;*/
+    /*}*/
+</style>
 <body>
 
 <!--navbar-->
@@ -16,94 +34,85 @@
             <p style="margin: 0;padding: 0">
                 <a href="./index.html">
                     <img src="../res/image/logo2.png" alt="logo" width="45" height="45">
-                    <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black">Polskie Alpaki&trade;</span>
+                    <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black;font-weight: 400">Polskie Alpaki&trade;</span>
                 </a>
             </p>
         </li>
         <li><a style="padding: 35px" href="./about.html">O firmie</a></li>
-        <li><a style="padding: 35px" href="./alpacas.html">Alpaki</a></li>
-        <li><a style="padding: 35px" href="./contact.html">Kontakt</a></li>
         <li><a style="padding: 35px" href="./fun.html">Rozrywka</a></li>
+        <li><a style="padding: 35px" href="./contact.html">Kontakt</a></li>
+        <li><a style="padding: 35px" href="./alpacas.html">Alpaki</a></li>
         <li><a style="padding: 35px" href="#">Dzialalnosc</a>
             <ul>
                 <li><a href="./job.html">Praca</a></li>
-                <li><a href="./companies.html">Dla firm</a>
-                    <ul>
-                        <li><a href="./trade.html">Handel</a></li>
-                    </ul>
-                </li>
+                <li><a href="./companies.html">Dla firm</a></li>
+                <li><a href="./trade.html">Handel</a></li>
             </ul>
         </li>
     </ul>
 </nav>
 
 <h2 style="text-align: center">Strona dla przyszłych pracowników naszej firmy</h2>
-<p style="text-align: center">Jeśli poszukujesz pracy przy hodowli, lubisz zwierzęta i masz z nimi dobry kontakt to
+<p style="text-align: center;margin-bottom: 2em">Jeśli poszukujesz pracy przy hodowli, lubisz zwierzęta i masz z nimi
+    dobry kontakt to
     zgłoś się do nas !</p>
 
 
 <!--offer form-->
 <form action="/action_page.php" autocomplete="on">
-    <div style="width: 600px;display: block;margin-left: auto;margin-right: auto" class = rounded-shaded-border id = grad-bottom-right>
-        Imię: <input type="text" name="fname" id="firstName" autofocus><br>
-        Nazwisko: <input type="text" name="lname" id="lastName" required><br>
-        E-mail: <input type="email" name="email" required><br>
-        Miesiąc urodzenia: <input list="months" name="months">
-        <datalist id="months">
-            <option value="styczeń">
-            <option value="luty">
-            <option value="marzec">
-            <option value="kwiecień">
-            <option value="maj">
-            <option value="czerwiec">
-            <option value="lipiec">
-            <option value="sierpień">
-            <option value="wrzesień">
-            <option value="październik">
-            <option value="listopad">
-            <option value="grudzień">
-        </datalist>
-        <br>
-        Telefon: <input type="tel" name="tel" pattern="[1-9]{6}"> 6 cyfr<br>
-        <p>Stanowisko</p>
-        Sprzątacz<input type="radio" name="job" value="sprzatacz" checked><br>
-        Hodowca<input type="radio" name="job" value="hodowca"><br>
-        Kucharz<input type="radio" name="job" value="kucharz"><br>
-        <p>Umiejetności</p>
-        Prawo jazdy<input type="checkbox" name="skills" value="drivingLicense"><br>
-        Inne doswiadczenie zawodowe<input type="checkbox" name="skills" value="experience"><br>
-        Znajomość języków obcych<input type="checkbox" name="skills" value="foreignLanguage"><br>
+    <div style="width: 400px;margin: 0 auto;" id=grad-bottom-right>
+        <div>
+            <label>Imię:</label>
+            <input type="text" name="fname" id="firstName" size="40" autofocus>
+        </div>
+        <div>
+            <label>Nazwisko:</label>
+            <input type="text" name="lname" id="lastName" size="40" required>
+        </div>
+        <div>
+            <label>E-mail:</label>
+            <input type="email" name="email" size="40" required>
+        </div>
+        <div>
+            <label>Miesiąc urodzenia:</label>
+            <input list="months" name="months" size="40">
+            <datalist id="months">
+                <option value="styczeń">
+                <option value="luty">
+                <option value="marzec">
+                <option value="kwiecień">
+                <option value="maj">
+                <option value="czerwiec">
+                <option value="lipiec">
+                <option value="sierpień">
+                <option value="wrzesień">
+                <option value="październik">
+                <option value="listopad">
+                <option value="grudzień">
+            </datalist>
+        </div>
+        <div>
+            <label>Telefon(6 cyfr):</label>
+            <input type="tel" name="tel" pattern="[1-9]{6}" size="40">
+        </div>
+        <div>
+            <label>Stanowisko</label><br>
+            <input type="radio" name="job" value="sprzatacz" checked>Sprzatacz<br>
+            <input type="radio" name="job" value="hodowca">Hodowca<br>
+            <input type="radio" name="job" value="weterynarz">Weterynarz<br>
+        </div>
+        <div>
+            <label>Umiejetności</label><br><br>
+            <input type="checkbox" name="skills" value="drivingLicense">Prawo jazdy<br>
+            <input type="checkbox" name="skills" value="experience">Inne doswiadczenie zawodowe<br>
+            <input type="checkbox" name="skills" value="foreignLanguage">Znajomość języków obcych<br>
+        </div>
         <input type="submit" style="margin-top: 20px">
     </div>
 </form>
 
-
 <footer>
     <p>Copyright 2017</p>
 </footer>
-
-<script type="text/javascript">
-    var firstName;
-    var lastName;
-    var salary;
-
-    function getValuesFromUser() {
-        firstName = window.prompt("Podaj imie");
-        lastName = window.prompt("Podaj nazwisko");
-        salary = parseFloat(window.prompt("Oczekiwane zarobki"));
-    }
-
-    function setValues() {
-        document.getElementById("firstName").setAttribute("value",firstName);
-        document.getElementById("lastName").setAttribute("value",lastName);
-    }
-
-    function startScript() {
-        getValuesFromUser();
-        setValues();
-    }
-    window.addEventListener("load",startScript,false);
-
-</script>
 </body>
 </html>

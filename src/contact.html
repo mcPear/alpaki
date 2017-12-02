@@ -7,6 +7,14 @@
     <meta name="keywords" content="kontakt, email">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
+<style type="text/css">
+    label{
+        display: block;float: left;width: 70px;text-align:center;
+    }
+    div{
+        margin-bottom: 2em;text-align: center;
+    }
+</style>
 <body>
 
 <!--navbar-->
@@ -16,22 +24,19 @@
             <p style="margin: 0;padding: 0">
                 <a href="./index.html">
                     <img src="../res/image/logo2.png" alt="logo" width="45" height="45">
-                    <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black">Polskie Alpaki&trade;</span>
+                    <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black;font-weight: 400">Polskie Alpaki&trade;</span>
                 </a>
             </p>
         </li>
         <li><a style="padding: 35px" href="./about.html">O firmie</a></li>
-        <li><a style="padding: 35px" href="./alpacas.html">Alpaki</a></li>
-        <li><a style="padding: 35px" href="./contact.html">Kontakt</a></li>
         <li><a style="padding: 35px" href="./fun.html">Rozrywka</a></li>
+        <li><a style="padding: 35px" href="./contact.html">Kontakt</a></li>
+        <li><a style="padding: 35px" href="./alpacas.html">Alpaki</a></li>
         <li><a style="padding: 35px" href="#">Dzialalnosc</a>
             <ul>
                 <li><a href="./job.html">Praca</a></li>
-                <li><a href="./companies.html">Dla firm</a>
-                    <ul>
-                        <li><a href="./trade.html">Handel</a></li>
-                    </ul>
-                </li>
+                <li><a href="./companies.html">Dla firm</a></li>
+                <li><a href="./trade.html">Handel</a></li>
             </ul>
         </li>
     </ul>
@@ -40,27 +45,27 @@
 <!--contact form-->
 <form action="#" method="post" onsubmit="confirmSubmit()" onreset="resetForm()">
     <h2 style="text-align: center">Skontaktuj się z nami</h2>
-    <div class="form" style="width: auto;margin-left: auto;margin-right: auto; text-align: center">
-    <div id="firstNameDiv">
-        <p>Imię :</p>
-        <input id="firstName" type="text" name="firstName" size="36">
+    <div style="width: 400px;margin:0 auto;">
+        <div id="firstNameDiv">
+            <label>Imię :</label>
+            <input id="firstName" type="text" name="firstName" size="40">
         </div>
-    <div id="lastNameDiv" >
-        <p>Nazwisko :</p>
-        <input id="lastName" type="text" name="lastName" size="36">
-</div>
-<div id="emailDiv" >
-        <p>Email :</p>
-        <input id="email" type="email" name="email" size="36">
-</div>
-<div id="contentDiv" >
-        <p>Treść :</p>
-        <textarea id="content" name="content" rows="4" cols="36" maxlength="200"></textarea>
-</div>
-        <p >
+        <div id="lastNameDiv">
+            <label>Nazwisko :</label>
+            <input id="lastName" type="text" name="lastName" size="40">
+        </div>
+        <div id="emailDiv">
+            <label>Email :</label>
+            <input id="email" type="email" name="email" size="40">
+        </div>
+        <div id="contentDiv">
+            <label>Treść :</label>
+            <textarea id="content" name="content" rows="4" cols="40" maxlength="200"></textarea>
+        </div>
+        <div>
             <input id="contactSubmit" type="submit" value="Wyslij">
             <input type="reset" value="Wyczyść">
-        </p>
+        </div>
     </div>
 </form>
 
