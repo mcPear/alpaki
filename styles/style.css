@@ -19,12 +19,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.formDiv{
-    margin-bottom: 2em;text-align: center;
-}
-.formLabel{
-    display: block;float: left;width: 100px;height:auto; text-align:center;
-}
 
 /***********************/
 /*******navbar**********/
