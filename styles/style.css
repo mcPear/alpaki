@@ -2,19 +2,27 @@
 /*******all pages**********/
 /**************************/
 body {
+    position: relative;
     margin: 0;
+    padding-bottom: 6em;
+    min-height: 100%;
+
+
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
 }
 
 footer {
-    clear: both;
-    position: relative;
-    height: 3em;
-    margin-top: 3em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
     background-color: #efefef;
     text-align: center;
-    padding: 1rem;
 }
-
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
