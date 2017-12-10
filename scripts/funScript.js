@@ -58,7 +58,6 @@ function initializeAlpacaImg() {
 }
 
 initializeRandomAlpacaTools();
-document.writeln("Wszelkie prawa zastrzeżone");
 
 
 var alpaca = document.getElementById("alpacaToMove");
