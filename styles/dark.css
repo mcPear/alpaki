@@ -20,7 +20,7 @@ footer {
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #efefef;
+    background-color: #292929;
     text-align: center;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -127,11 +127,11 @@ table {
     margin-left: auto;
     border-collapse: collapse;
     border: 1px solid lightslategrey;
-    background-color: azure;
+    background-color: #292929;
 }
 
 th, td {
-    background-color: rgba(255, 250, 210, 0.5);
+    background-color: #292929;
     text-align: center;
     padding: 15px;
 }
@@ -172,20 +172,20 @@ a[content="fun"]:hover {
 /*}*/
 
 p:empty {
-    background-color: antiquewhite;
+    background-color: #292929;
 }
 
 @media screen and (max-width: 500px) {
     body {
         background-image: none;
-        background-color: white;
+        background-color: #292929;
     }
 }
 
 @media screen and (max-height: 500px) {
     body {
         background-image: none;
-        background-color: white;
+        background-color: #292929;
     }
 }
 
@@ -198,7 +198,7 @@ div.rounded-shaded-border {
     border-radius: 25px;
     margin: 10px;
     padding: 10px;
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: 10px 10px 5px #792929;
     /*margin-left: -3em;*/
 }
 
@@ -212,18 +212,18 @@ section {
 
 .grad-bottom-right {
     background: rgba(255, 238, 204, 0.4); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Fx 3.6-15*/
-    background: linear-gradient(to bottom right, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Standard*/
+    background: -webkit-linear-gradient(bottom right, #292929, rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(bottom right, #292929, rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(bottom right, #292929, rgba(204, 102, 17, 0.4)); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom right, #292929, rgba(204, 102, 17, 0.4)); /*Standard*/
 }
 
 .grad-bottom {
     background: rgba(255, 238, 204, 0.4); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Fx 3.6-15*/
-    background: linear-gradient(to bottom, rgba(255, 238, 204, 0.8), rgba(204, 102, 17, 0.4)); /*Standard*/
+    background: -webkit-linear-gradient(bottom, #292929, rgba(204, 102, 17, 0.4)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(bottom, #292929, rgba(204, 102, 17, 0.4)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(bottom, #292929, rgba(204, 102, 17, 0.4)); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #292929, rgba(204, 102, 17, 0.4)); /*Standard*/
 }
 
 
@@ -366,6 +366,10 @@ div[rotate="-9deg"] {
 
 .center {
     text-align: center;
+}
+
+html{
+    background-color: #292929;
 }
 
 

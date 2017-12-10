@@ -5,7 +5,11 @@
     <title>Praca</title>
     <meta name="description" content="Strona dla osób zainteresowanych pracą w firmie">
     <meta name="keywords" content="praca, gospodarstwo, hodowla, weterynaria, opieka">
-    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <?php
+        if(isset($_COOKIE['css'])){
+            echo '<link rel="stylesheet" type="text/css" href="../styles/'.$_COOKIE['css'].'">';
+            } else {echo '<link rel="stylesheet" type="text/css" href="../styles/style.css">';}
+            ?>
 </head>
 <style type="text/css">
     label {
@@ -119,17 +123,18 @@ function isValidMonth($month){
                 </a>
             </p>
         </li>
-        <li><a style="padding: 35px" href="./about.html">O firmie</a></li>
-        <li><a style="padding: 35px" href="./fun.html">Rozrywka</a></li>
-        <li><a style="padding: 35px" href="./contact.html">Kontakt</a></li>
-        <li><a style="padding: 35px" href="./alpacas.html">Alpaki</a></li>
-        <li><a style="padding: 35px" href="#">Dzialalnosc</a>
-            <ul>
-                <li><a href="./job.html">Praca</a></li>
-                <li><a href="./companies.html">Dla firm</a></li>
-                <li><a href="./trade.html">Handel</a></li>
-            </ul>
-        </li>
+        <li><a style="padding: 35px" href="./settings.php">Ustawienia</a></li>
+                <li><a style="padding: 35px" href="./about.php">O firmie</a></li>
+                <li><a style="padding: 35px" href="./fun.php">Rozrywka</a></li>
+                <li><a style="padding: 35px" href="./contact.php">Kontakt</a></li>
+                <li><a style="padding: 35px" href="alpacas.php">Alpaki</a></li>
+                <li><a style="padding: 35px" href="#">Dzialalnosc</a>
+                    <ul>
+                        <li><a href="./job.php">Praca</a></li>
+                        <li><a href="./companies.php">Dla firm</a></li>
+                        <li><a href="./trade.php">Handel</a></li>
+                    </ul>
+                </li>
     </ul>
 </nav>
 

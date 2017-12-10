@@ -1,16 +1,48 @@
 <!DOCTYPE html>
+<?php
+
+    $css = $default = 'style.css'; // define stylesheets
+    $darkcss = 'dark.css';
+    $lagooncss = 'lagoon.css';
+
+    $expire = time()+60*60*24*30; // how long to remember css choice (60*60*24*30 = 30 days)
+
+
+
+    if ( (isset($_GET['css'])) && ($_GET['css'] == $lagooncss) ) { // set cookie for light css
+        setcookie('css', $_GET['css'], $expire);
+        }
+
+    if ( (isset($_GET['css'])) && ($_GET['css'] == $darkcss) ) { // set cookie for dark css
+        setcookie('css', $_GET['css'], $expire);
+        }
+
+    if ( (isset($_GET['css'])) && ($_GET['css'] == $default) ) { // set cookie for default css
+        setcookie('css', $_GET['css'], $expire);
+        }
+
+        function refreshPage(){
+        $page = "./alpacas.php";
+        $sec = "10";
+        header("Refresh: $sec; url=$page");
+        }
+
+    $css = $_COOKIE['css'];
+
+    ?>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Praca</title>
-    <meta name="description" content="Strona dla osób zainteresowanych pracą w firmie">
-    <meta name="keywords" content="praca, gospodarstwo, hodowla, weterynaria, opieka">
+    <title>O firmie</title>
+    <meta name="description" content="Informacje o firmie">
+    <meta name="keywords" content="informacje, firma, Polskie Alpaki">
     <?php
         if(isset($_COOKIE['css'])){
             echo '<link rel="stylesheet" type="text/css" href="../styles/'.$_COOKIE['css'].'">';
             } else {echo '<link rel="stylesheet" type="text/css" href="../styles/style.css">';}
             ?>
 </head>
+
 <body>
 
 <!--navbar-->
@@ -39,45 +71,10 @@
     </ul>
 </nav>
 
-<?php
-
-if (!preg_match("/@/", $_POST["email"])) {
-    print("<div style='text-align: center'>");
-    print("<h2>Błędny adres email</h2>");
-    print("<p>Proszę podać prawidłowy adres email, zawierający znak @</p>");
-    print("</div>");
-    die();
-}
-?>
-<div style="text-align: center">
-    <h2>Witaj <?php print($_POST["firstName"]) ?></h2>
-    <p>Dziękujemy za twoje zgłoszenie. Oto dane które podałeś :</p>
-    <p>Imie: <strong><?php
-            if(isset($_POST["firstName"])) {
-                print($_POST["firstName"]);
-            }
-            else{
-                print("Brak");
-            }
-            ?></strong></p>
-    <p>Nazwisko: <strong><?php
-            if(isset($_POST["lastName"])) {
-                print($_POST["lastName"]);
-            }
-            else{
-                print("Brak");
-            }
-            ?></strong></p>
-    <p>Email: <strong><?php print($_POST["email"]) ?></strong></p>
-    <p>Treść: <strong><?php
-            if(isset($_POST["content"])) {
-                print($_POST["content"]);
-            }
-            else{
-                print("Brak");
-            }
-            ?></strong></p>
-    <p style="margin-top: 3em"><?php print($_SERVER["HTTP_USER_AGENT"]) ?></p>
+<div >
+    <a href="?css=<?php echo $lagooncss;?>">Lagoon</a>
+    <a href="?css=<?php echo $darkcss;?>">Dark</a>
+    <a href="?css=<?php echo $default;?>">Default</a>
 </div>
 
 <footer>
