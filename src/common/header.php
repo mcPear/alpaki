@@ -1,6 +1,6 @@
 <?php
 
-echo ("<nav>
+echo("<nav>
     <ul class=\"main-navigation\">
         <li style=\"float: left\">
             <p style=\"margin: 0;padding: 0\">
@@ -9,20 +9,28 @@ echo ("<nav>
                     <span style=\"font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black;font-weight: 400\">Polskie Alpaki&trade;</span>
                 </a>
             </p>
-        </li>
-        <li><a style=\"padding: 35px\" href=\"./settings.php\">Ustawienia</a></li>
-                <li><a style=\"padding: 35px\" href=\"./about.php\">O firmie</a></li>
-                <li><a style=\"padding: 35px\" href=\"./fun.php\">Rozrywka</a></li>
-                <li><a style=\"padding: 35px\" href=\"./contact.php\">Kontakt</a></li>
-                <li><a style=\"padding: 35px\" href=\"alpacas.php\">Alpaki</a></li>
-                <li><a style=\"padding: 35px\" href=\"#\">Dzialalnosc</a>
-                    <ul>
-                        <li><a href=\"./job.php\">Praca</a></li>
-                        <li><a href=\"./companies.php\">Dla firm</a></li>
-                        <li><a href=\"./trade.php\">Handel</a></li>
-                    </ul>
-                </li>
+        </li>");
+
+if (isset($_SESSION["valid"]) && $_SESSION["valid"] == true) {
+    echo("<li><a style=\"padding: 35px\" href=\"./logout.php\">Wyloguj</a></li>");
+} else {
+    echo("<li><a style=\"padding: 35px\" href=\"./login.php\">Zaloguj</a></li>");
+}
+
+echo("<li><a style=\"padding: 35px\" href=\"./settings.php\">Ustawienia</a></li>
+      <li><a style=\"padding: 35px\" href=\"./about.php\">O firmie</a></li>
+      <li><a style=\"padding: 35px\" href=\"./fun.php\">Rozrywka</a></li>
+      <li><a style=\"padding: 35px\" href=\"alpacas.php\">Alpaki</a></li>
+      <li><a style=\"padding: 35px\" href=\"#\">Dzialalnosc</a>
+          <ul>
+              <li><a href=\"./job.php\">Praca</a></li>
+              <li><a href=\"./companies.php\">Dla firm</a></li>
+              <li><a href=\"./trade.php\">Handel</a></li>
+              <li><a href=\"./contact.php\">Kontakt</a></li>
+          </ul>
+      </li>
     </ul>
 </nav>");
+
 
 ?>
