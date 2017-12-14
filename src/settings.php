@@ -52,9 +52,9 @@ $css = $_COOKIE['css'];
 <?php
 if (isset($_SESSION["valid"]) && $_SESSION["valid"] == true) {
     echo("<div style=\"text-align: center\">
-    <a href=\"?css=" . $lagooncss . ";\">Lagoon</a>
-    <a href=\"?css=" . $darkcss . ";\">Dark</a>
-    <a href=\"?css=" . $default . ";\">Default</a>
+    <a href=\"?css=" . $lagooncss . "\">Lagoon</a>
+    <a href=\"?css=" . $darkcss . "\">Dark</a>
+    <a href=\"?css=" . $default . "\">Default</a>
 </div>");
 }
 else{
