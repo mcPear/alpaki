@@ -5,9 +5,9 @@ session_start();
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Strona główna</title>
-    <meta name="description" content="Strona startowa firmy Polskie Alpaki">
-    <meta name="keywords" content="start, firma, Polskie Alpaki">
+    <title>Logowanie</title>
+    <meta name="description" content="Strona logowania firmy Polskie Alpaki">
+    <meta name="keywords" content="logowanie, firma, Polskie Alpaki">
     <?php
     if (isset($_COOKIE['css'])) {
         echo '<link rel="stylesheet" type="text/css" href="../styles/' . $_COOKIE['css'] . '">';
@@ -21,43 +21,47 @@ session_start();
 <?php
 $msg = "";
 
-$users = array("a" =>"a",
-                "admin"=>"admin");
+if (isset($_POST["send"])) {
 
-function key_value_pair_exists(array $array, $key, $value) {
-    return array_key_exists($key, $array) &&
-        $array[$key] == $value;
-}
+    $userLogin = $_POST["login"];
+    $userPassword =$_POST["password"];
 
-if (isset($_POST["login"])) {
+    include ("db/db_connect.php");
+    $link->select_db("alpaki");
+    $stmt = $link->prepare("SELECT * FROM users WHERE login = ? AND password = ?");
 
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $stmt->bind_param('ss',$userLogin,$userPassword);
 
-    if (key_value_pair_exists($users,$username,$password)) {
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows>0) {
         $_SESSION["valid"] = true;
-        $_SESSION["username"] = $username;
+        $_SESSION["login"] = $userLogin;
     } else {
         $msg = "Błędny login lub hasło";
     }
+    $link->close();
 }
 
 //navbar
 include("common/header.php");
 
 if (isset($_SESSION["valid"]) && $_SESSION["valid"] == true) {
-    echo("<p style='text-align: center'>Jesteś zalogowany jako " . $_SESSION["username"] . "</p>");
+    echo("<p style='text-align: center'>Jesteś zalogowany jako " . $_SESSION["login"] . "</p>");
 }
 else {
     echo("<h2>Podaj login i hasło</h2>
     <form action='login.php' method='post' style='text-align: center'>
     <p>Login</p>
-    <input type='text' name='username'><br>
+    <input type='text' name='login'><br>
     <p>Hasło</p>
     <input type='password' name='password'><br><br>
-    <input type='submit' value='Zaloguj' name='login'>
+    <input type='submit' value='Zaloguj' name='send'>
     <p style='color: red'>" . $msg . "</p>
-    </form>");
+    <a style='margin-top: 3em;text-align: center' href='register_edit.php'>Rejestracja</a>
+    </form>
+");
 }
 
 

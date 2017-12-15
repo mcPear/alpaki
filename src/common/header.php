@@ -13,6 +13,7 @@ echo("<nav>
 
 if (isset($_SESSION["valid"]) && $_SESSION["valid"] == true) {
     echo("<li><a style=\"padding: 35px\" href=\"./logout.php\">Wyloguj</a></li>");
+    echo("<li><a style=\"padding: 35px\" href=\"./register_edit.php\">Edycja</a></li>");
 } else {
     echo("<li><a style=\"padding: 35px\" href=\"./login.php\">Zaloguj</a></li>");
 }
