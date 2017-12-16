@@ -287,6 +287,13 @@ div[rotate="-9deg"] {
     transform: rotate(-9deg);
 }
 
+.login-info{
+    background: deepskyblue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -306,6 +313,12 @@ div[rotate="-9deg"] {
     width: 400px;
     height: 400px;
     margin: 10px;
+}
+
+
+.white-text {
+    color: white;
+    text-decoration: none;
 }
 
 /************************************************************************/

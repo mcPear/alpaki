@@ -175,6 +175,11 @@ p:empty {
     background-color: antiquewhite;
 }
 
+.white-text {
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 500px) {
     body {
         background-image: none;
@@ -351,6 +356,12 @@ div[rotate="-9deg"] {
     }
 }
 
+.login-info{
+    background: lightgray;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
 * {
     font-family: 'Lobster', cursive;

@@ -83,6 +83,13 @@ li:hover li {
     background: darkgray;
 }
 
+.login-info{
+    background: darkgray;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 li:hover li a:hover {
     background: darkgray;
 }
@@ -103,6 +110,12 @@ ul:before, ul:after {
 
 ul:after {
     clear: both;
+}
+
+
+.white-text {
+    color: white;
+    text-decoration: none;
 }
 
 /***************************/

@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$password = "admin";
+$password = "pass";
 $dbname = "alpaki";
 $msg = "";
 

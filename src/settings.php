@@ -27,7 +27,12 @@ function refreshPage(){
     header("Refresh: $sec; url=$page");
 }
 
+if(isset($_COOKIE['css'])){
 $css = $_COOKIE['css'];
+}
+else {
+$css = $default;
+}
 
 ?>
 <!DOCTYPE html>
@@ -62,6 +67,7 @@ else{
 }
 ?>
 
+<a href="./db_monitor.php"><p>"db monitor"</p></a>
 <?php include ("common/footer.php");?>
 </body>
 </html>

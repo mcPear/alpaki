@@ -30,8 +30,9 @@ echo("<li><a style=\"padding: 35px\" href=\"./settings.php\">Ustawienia</a></li>
               <li><a href=\"./contact.php\">Kontakt</a></li>
           </ul>
       </li>
-    </ul>
-</nav>");
+    </ul>");
+    include("common/userLogin.php");
+echo("</nav>");
 
 
 ?>
