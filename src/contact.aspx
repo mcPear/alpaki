@@ -69,6 +69,21 @@
                    ErrorMessage="Prosze podaj swoj poprawny adres email" ForeColor="Red" 
                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         </div>
+        <div id="emailDiv">
+            <label>Powtórz email :</label>
+            <asp:TextBox ID="repeatEmailTextBox" runat="server"></asp:TextBox><br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                   ControlToValidate="repeatEmailTextBox" Display="Dynamic" 
+                   ErrorMessage="Prosze powtórz swój email" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareEmail" 
+                    ControlToValidate="repeatEmailTextBox" 
+                    ControlToCompare="emailTextBox" 
+                    Type="String"
+                    Display="Dynamic" 
+                    Operator="Equal" 
+                    ErrorMessage="Email różni się od wprowadzonego" ForeColor="Red"
+                    runat="server"/>
+        </div>
         <div id="phoneDiv">
             <label>Telefon :</label>
             <asp:TextBox ID="phoneTextBox" runat="server"></asp:TextBox><br />
@@ -79,6 +94,15 @@
                    runat="server" ControlToValidate="phoneTextBox" Display="Dynamic" 
                    ErrorMessage="Prosze podaj swoj poprawny numer telefonu" ForeColor="Red" 
                    ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+        </div>
+        <div id="ageDiv">
+            <label>Wiek :</label>
+            <asp:TextBox ID="ageTextBox" runat="server"></asp:TextBox><br />
+                <asp:RequiredFieldValidator ID="ageRequiredFieldValidator" runat="server" 
+                   ControlToValidate="ageTextBox" Display="Dynamic" 
+                   ErrorMessage="Prosze podaj swoj wiek" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="ageRangeValidator" runat="server" ControlToValidate="ageTextBox" MaximumValue="120" MinimumValue="18"
+                 ForeColor="Red" ErrorMessage="Prawidłowy wiek to dorosły do 120 lat" runat="server" Display="Dynamic" Type="Integer"/>
         </div>
         <div id="contentDiv">
             <label>Treść :</label>
