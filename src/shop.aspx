@@ -117,11 +117,14 @@
       </asp:CheckBoxList>
 
       <br /><br />
+
                 <asp:Label 
             ID="Busket" 
             runat="server"
             >
         </asp:Label>
+              <br /><br />
+        <a href="summary.aspx">Przejdź do podsumowania</a>
     </form>
 
 

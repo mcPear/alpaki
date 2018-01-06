@@ -182,4 +182,5 @@ public partial class src_contact : System.Web.UI.Page
 
         return productsInCategories;
     }
+
 } // end class Validation
