@@ -33,6 +33,7 @@
             </p>
         </li>
       <li><a style="padding: 35px" href="../src/about.htm">O firmie</a></li>
+        <li><a style="padding: 35px" href="../src/shop.aspx">Sklep</a></li>
       <li><a style="padding: 35px" href="#">Dzialalnosc</a>
           <ul>
               <li><a href="../src/contact.aspx">Kontakt</a></li>
