@@ -20,6 +20,13 @@ public partial class src_contact : System.Web.UI.Page
         {
             Busket.Text = busketToString();
         }
+        if (Session["busket"] == null) 
+        {
+            RadioButtonListDelivery.Visible = false;
+        }
+        if(RadioButtonListDelivery.SelectedIndex >= 0){
+            OrderConfirmLink.Visible = true;
+        }
 
     } // end method Page_Load
 
@@ -29,6 +36,11 @@ public partial class src_contact : System.Web.UI.Page
         ProductsCost.Text = productsCost == 0 ? "" : "Koszt produktów: " + productsCost;
         DeliveryCost.Text = deliveryCost == 0 ? "" : "Koszt dostawy: " + deliveryCost;
         FullCost.Text = productsCost == 0 ? "" : "Koszt zamówienia: " + (deliveryCost + productsCost);
+        setFullCostInSession(deliveryCost + productsCost);
+    }
+
+    private void setFullCostInSession(int fullCost) {
+        Session["fullCost"] = fullCost;
     }
 
     private string busketToString() {

@@ -81,13 +81,14 @@
 
         <div>
                 <asp:Label ID="DeliveryLabel" runat="server" Font-Size="Large" ForeColor="Crimson"></asp:Label>
-                <asp:RadioButtonList ID="RadioButtonListDelivery" runat="server" OnSelectedIndexChanged="HandleDeliveryChanged">
+                <asp:RadioButtonList ID="RadioButtonListDelivery" runat="server" OnSelectedIndexChanged="HandleDeliveryChanged" AutoPostBack=true>
                     <asp:ListItem>TNT 10zł</asp:ListItem>
                     <asp:ListItem>Poczta Polska 13zł</asp:ListItem>
                     <asp:ListItem>odbiór osobisty 0zł</asp:ListItem>
                 </asp:RadioButtonList>
                 
             </div>
+            <asp:HyperLink ID="OrderConfirmLink" href="confirm.aspx" runat="server" Visible="false">Zloz zamowienie</asp:HyperLink>
     </form>
 
 
