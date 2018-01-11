@@ -33,7 +33,7 @@
     </ul>
 </nav>
 
-<div>
+<div style="text-align:center">
     <asp:Label ID = "Acknowledgement" runat="server" style="font-size:xx-large">
     </asp:Label>
     <br>

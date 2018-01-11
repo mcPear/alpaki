@@ -70,6 +70,7 @@
         <br />
     </div>
 
+    <div style="text-align:center">
         <h3> Produkty </h3>
 
       Wybierz produkt z danej kategorii.
@@ -125,6 +126,7 @@
         </asp:Label>
               <br /><br />
         <a href="summary.aspx">Przejdź do podsumowania</a>
+        </div>
     </form>
 
 

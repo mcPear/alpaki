@@ -79,18 +79,21 @@
             </div>
 
 
-        <div>
+        <div style="text-align:center">
                 <asp:Label ID="DeliveryLabel" runat="server" Font-Size="Large" ForeColor="Crimson"></asp:Label>
                 <asp:RadioButtonList ID="RadioButtonListDelivery" runat="server" OnSelectedIndexChanged="HandleDeliveryChanged" AutoPostBack=true>
                     <asp:ListItem>TNT 10zł</asp:ListItem>
                     <asp:ListItem>Poczta Polska 13zł</asp:ListItem>
                     <asp:ListItem>odbiór osobisty 0zł</asp:ListItem>
                 </asp:RadioButtonList>
+          <br/>
+          <br/>
+          <asp:HyperLink ID="OrderConfirmLink" CssClass="textalign" href="confirm.aspx" runat="server" Visible="false">Zloz zamowienie</asp:HyperLink>
                 
-            </div>
-            <asp:HyperLink ID="OrderConfirmLink" href="confirm.aspx" runat="server" Visible="false">Zloz zamowienie</asp:HyperLink>
+        </div>
+ 
     </form>
-
+    
 
 <footer>
 <p>Copyright 2017</p>
