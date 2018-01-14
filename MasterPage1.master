@@ -35,8 +35,10 @@
 </nav>
 
            <form id="Form1" runat="server">
-                   <asp:Button ID="Submit1" OnClick="Signout_Click" 
-       Text="Wyloguj" runat="server" />
+               <div style="display: inline-block; width: 100%; text-align:right;">
+               <asp:LoginName ID="LoginName2" runat="server" FormatString="{0}   " ForeColor="Crimson" />
+                   <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="loginStatus"/>
+                   </div>
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         

@@ -139,6 +139,7 @@ public partial class src_contact : System.Web.UI.Page
     }
 
     private void visibleOneBoxList(int index) {
+        if(index >= 0 && index < getAllBoxLists().Count)
         getAllBoxLists()[index].Visible = true;
     }
 
