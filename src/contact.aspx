@@ -8,7 +8,6 @@
     </asp:Content>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
     <h2 style="text-align: center">Skontaktuj się z nami</h2>
     <div style="width: 400px;margin:0 auto;">
         <div id="firstNameDiv">
@@ -85,5 +84,4 @@
         <asp:Label ID="outputLabel" runat="server" Visible="False"></asp:Label>
         </p>
     </div>
-    </form>
         </asp:Content>

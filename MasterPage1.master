@@ -16,28 +16,33 @@
     <ul class="main-navigation">
         <li style="float: left">
             <p style="margin: 0;padding: 0;">
-                <a href="../src/index.aspx">
-                    <img src="../res/image/logo2.png\" alt="logo" width="45" height="45">
+                <a href="/default.aspx">
+                    <img src="/res/image/logo2.png" alt="logo" width="45" height="45">
                     <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black;font-weight: 400">Polskie Alpaki&trade;</span>
                 </a>
             </p>
         </li>
-      <li><a style="padding: 35px" href="../src/about.aspx">O firmie</a></li>
-        <li><a style="padding: 35px" href="../src/shop.aspx">Sklep</a></li>
-        <li><a style="padding: 35px" href="../src/products.aspx">O produktach</a></li>
+      <li><a style="padding: 35px" href="/src/about.aspx">O firmie</a></li>
+        <li><a style="padding: 35px" href="/src/shop.aspx">Sklep</a></li>
+        <li><a style="padding: 35px" href="/src/products.aspx">O produktach</a></li>
+        <li><a style="padding: 35px" href="/src/safe/products.aspx">Dla pracownika</a></li>
       <li><a style="padding: 35px" href="#">Dzialalnosc</a>
           <ul>
-              <li><a href="../src/contact.aspx">Kontakt</a></li>
+              <li><a href="/src/contact.aspx">Kontakt</a></li>
           </ul>
       </li>
     </ul>
 </nav>
 
+           <form id="Form1" runat="server">
+                   <asp:Button ID="Submit1" OnClick="Signout_Click" 
+       Text="Wyloguj" runat="server" />
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
+                 </form>
 
     <footer>
 <p>Copyright 2017</p>

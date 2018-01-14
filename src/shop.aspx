@@ -8,7 +8,6 @@
     </asp:Content>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
     <div>
         <h2 style="color:SeaGreen; font-style:italic;">
             Nasza oferta
@@ -91,6 +90,5 @@
               <br /><br />
         <a href="summary.aspx">Przejdź do podsumowania</a>
         </div>
-    </form>
         </asp:Content>
 

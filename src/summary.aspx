@@ -9,7 +9,7 @@
 
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <form id="form1" runat="server">
+
     <div>
         <h2 style="color:SeaGreen; font-style:italic;">
             Podsumowanie zamówienia
@@ -57,6 +57,6 @@
                 
         </div>
  
-    </form>
+    
         </asp:Content>
 
