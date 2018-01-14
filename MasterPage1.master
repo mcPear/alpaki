@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage1.master.cs" Inherits="MasterPage1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--navbar-->
+<nav>
+    <ul class="main-navigation">
+        <li style="float: left">
+            <p style="margin: 0;padding: 0;">
+                <a href="../src/index.aspx">
+                    <img src="../res/image/logo2.png\" alt="logo" width="45" height="45">
+                    <span style="font-size: xx-large;font-style: oblique;font-variant: small-caps; color: black;font-weight: 400">Polskie Alpaki&trade;</span>
+                </a>
+            </p>
+        </li>
+      <li><a style="padding: 35px" href="../src/about.aspx">O firmie</a></li>
+        <li><a style="padding: 35px" href="../src/shop.aspx">Sklep</a></li>
+      <li><a style="padding: 35px" href="#">Dzialalnosc</a>
+          <ul>
+              <li><a href="../src/contact.aspx">Kontakt</a></li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <footer>
+<p>Copyright 2017</p>
+</footer>
+</body>
+</html>

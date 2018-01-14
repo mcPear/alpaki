@@ -11,7 +11,6 @@ public partial class src_confirm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
         if (Session["busket"] != null && Session["fullCost"] != null)
         {
             Acknowledgement.Text = "Dziekujemy za twoje zamowienie";
