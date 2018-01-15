@@ -383,7 +383,7 @@ div[rotate="-9deg"] {
 
 .loginStatus {
     color: black;
-    text-underline-position:unset;
+    text-decoration: none;
 }
 
 
