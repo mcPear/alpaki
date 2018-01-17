@@ -16,7 +16,7 @@
             <div style="float: right;margin-right: 100px">
                 <h2>Nasze podopieczne</h2>
                 <p>
-                    <img class="img-rounded" src="../res/image/all1.jpg" alt="Hodowla" height="400" width="600">
+                    <img class="img-rounded" src="/alpaki/res/image/all1.jpg" alt="Hodowla" height="400" width="600">
                 </p>
             </div>
     </div>
@@ -37,6 +37,5 @@
         </article>
     </div>
 </section>
-<img class="center img-rounded" src="../res/image/hodowla.jpg" alt="Hodowla" height="600" width="1000">
-        </asp:Content>
+</asp:Content>
 

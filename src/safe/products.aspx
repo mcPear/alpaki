@@ -8,16 +8,62 @@
     </asp:Content>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <h1>Informacje o naszych produktach</h1>
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
-            <ItemTemplate>
-                <div class="grad-bottom-right">
-                    <h2><%# Eval("header") %></h2>
-                    <p><small>Data dodania: <%# Eval("date") %></small></p>
-                    <p><%# Eval("description") %></p>
-                    </div>
-                </ItemTemplate>
-        </asp:Repeater>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [date], [header], [description] FROM [product]"></asp:SqlDataSource>
+
+           <table class="style1">
+          <tr>
+             <td valign="top">
+                Nazwa:</td>
+             <td valign="top">
+                <asp:TextBox ID="headerTextBox" runat="server" CssClass="singleLineTextBox"></asp:TextBox>
+             </td>
+          </tr>
+          <tr>
+             <td valign="top">
+                Data:</td>
+             <td valign="top">
+                <asp:TextBox ID="dateTextBox" runat="server" CssClass="singleLineTextBox" type="date"></asp:TextBox>
+             </td>
+          </tr>
+          <tr>
+             <td valign="top">
+                Opis:</td>
+             <td valign="top">
+                <asp:TextBox ID="descriptionTextBox" runat="server" CssClass="multilineTextBox" 
+                   TextMode="MultiLine"></asp:TextBox>
+             </td>
+          </tr>
+          <tr>
+             <td valign="top">
+                 &nbsp;</td>
+             <td valign="top">
+                <asp:Button ID="submitButton" runat="server" Text="Dodaj" 
+                   onclick="submitButton_Click"  />
+                &nbsp;<asp:Button ID="clearButton" runat="server" Text="Wyczysc" 
+                  onClick="clearButton_Click" />
+             </td>
+          </tr>
+       </table>
+
+        <br>
+        <br>
+
+                 <asp:LinqDataSource ID="productsLinqDataSource" runat="server" 
+             ContextTypeName="DatabaseDataContext" EnableInsert="True" EntityTypeName="" 
+             TableName="products" EnableUpdate="True" EnableDelete="True">
+          </asp:LinqDataSource>
+
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+    DataKeyNames="Id" DataSourceID="productsLinqDataSource">
+            <Columns>
+                <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" 
+                    ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
+                <asp:BoundField DataField="header" HeaderText="header" 
+                    SortExpression="header" />
+                <asp:BoundField DataField="description" HeaderText="description" 
+                    SortExpression="description" />
+            </Columns>
+</asp:GridView>
         </asp:Content>
 

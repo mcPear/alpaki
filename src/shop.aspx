@@ -5,14 +5,20 @@
     <title>Skontaktuj się z nami</title>
     <meta name="description" content="Formularz umożliwiający kontakt z firmą">
     <meta name="keywords" content="kontakt, email">
-    </asp:Content>
+        <style type="text/css">
+            .newStyle1
+            {
+                text-align: center;
+            }
+        </style>
+</asp:Content>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
+    <div class="newStyle1">
         <h2 style="color:SeaGreen; font-style:italic;">
             Nasza oferta
         </h2>
-        <hr width="350" align="left" color="DarkSeaGreen" />
+        <hr width="350" color="DarkSeaGreen" />
         <asp:Label 
             ID="Label1" 
             runat="server"
@@ -22,7 +28,7 @@
         <asp:RadioButtonList
              ID="RadioButtonList1"
              runat="server"
-             RepeatLayout="OrderedList"
+             RepeatLayout="Table"
              RepeatDirection="Vertical"
              Font-Names="Comic Sans MS"
              Font-Size="Medium"
