@@ -22,8 +22,8 @@
             ContextTypeName="DatabaseDataContext" EnableInsert="True" EnableUpdate="True" 
             EntityTypeName="" TableName="products">
         </asp:LinqDataSource>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+<%--        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:DatabaseConnectionString2 %>" 
-            SelectCommand="SELECT [date], [header], [description] FROM [product]"></asp:SqlDataSource>
+            SelectCommand="SELECT [date], [header], [description] FROM [product]"></asp:SqlDataSource>--%>
         </asp:Content>
 
